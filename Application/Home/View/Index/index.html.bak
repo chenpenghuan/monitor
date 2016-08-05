@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>监控管理平台</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- 引入 Bootstrap -->
+      <link href="__PUBLIC__/css/bootstrap.css" rel="stylesheet">
+
+      <!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+      <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+      <!--[if lt IE 9]>
+         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+   </head>
+   <body>
+		<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+		<script src="__PUBLIC__/js/jquery.js"></script>
+		<!-- 包括所有已编译的插件 -->
+		<script src="__PUBLIC__/js/bootstrap.min.js"></script>
+		<div class="btn-group">
+			<div class="dropdown" class="btn-group">
+				<button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">通道监测
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu1" aria-labelledby="dropdownMenu1">
+					<li role="presentation">
+						<a role="menuitem" tabindex="-1" href="#">通道待发数量</a>
+					</li>
+					<li role="presentation">
+						<a role="menuitem" tabindex="-1" href="#">通道延迟时间</a>
+					</li>
+					<li role="presentation">
+						<a role="menuitem" tabindex="-1" href="#">通道发送累计</a>
+					</li>
+					<li role="presentation" class="divider"></li>
+					<li role="presentation">
+						<a role="menuitem" tabindex="-1" href="#">分离的链接</a>
+					</li>
+				</ul>
+			</div>
+			<div class="dropdown" class="btn-group">
+				<button type="button" class="btn dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown">报警设置
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu2" aria-labelledby="dropdownMenu2">
+					<li role="presentation">
+						<a role="menuitem" tabindex="-1" href="#">Java</a>
+					</li>
+					<li role="presentation">
+						<a role="menuitem" tabindex="-1" href="#">数据挖掘</a>
+					</li>
+					<li role="presentation">
+						<a role="menuitem" tabindex="-1" href="#">数据通信/网络</a>
+					</li>
+					<li role="presentation" class="divider"></li>
+					<li role="presentation">
+						<a role="menuitem" tabindex="-1" href="#">分离的链接</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+   </body>
+</html> 

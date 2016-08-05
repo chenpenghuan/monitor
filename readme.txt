@@ -1,0 +1,1 @@
+"item2id,act="list",url="__URL__/foritems2"

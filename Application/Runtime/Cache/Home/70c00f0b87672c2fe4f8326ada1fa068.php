@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit();?><script>alert("验证码错误！")</script>

@@ -1,0 +1,1943 @@
+[ 2016-08-03T14:04:58+08:00 ] ::1 /mysite/index.php/home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.929478s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.979020s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.979163s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000168s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:7.596677s ]
+INFO: [ view_parse ] --END-- [ RunTime:7.596882s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.101077s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.101204s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.432924s ]
+INFO: [ app_end ] --END-- [ RunTime:0.433011s ]
+
+[ 2016-08-03T14:05:01+08:00 ] ::1 /mysite/index.php/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000076s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000154s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000146s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.149888s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.149973s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000092s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000162s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000063s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000137s ]
+
+[ 2016-08-03T14:05:07+08:00 ] ::1 /mysite/index.php/Home/Index/chkimg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000140s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000274s ]
+
+[ 2016-08-03T14:33:08+08:00 ] ::1 /mysite/index.php/Home/Index/chkimg/0.668135048062301
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000116s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000174s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000341s ]
+
+[ 2016-08-03T14:33:09+08:00 ] ::1 /mysite/index.php/Home/Index/chkimg/0.2611490325141441
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000116s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000085s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000191s ]
+
+[ 2016-08-03T14:33:20+08:00 ] ::1 /mysite/index.php/Home/Index/chklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000155s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000096s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000214s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000053s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000136s ]
+
+[ 2016-08-03T14:33:23+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000151s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000167s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000275s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:1.703415s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.703511s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000085s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000162s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000069s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000179s ]
+
+[ 2016-08-03T15:04:13+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000153s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000112s ]
+SQL: SHOW COLUMNS FROM `item_conf` [ RunTime:0.0007s ]
+SQL: SELECT `id` FROM `item_conf`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000081s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000157s ]
+
+[ 2016-08-03T15:05:21+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000145s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000059s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000134s ]
+SQL: SHOW COLUMNS FROM `item_conf` [ RunTime:0.0107s ]
+ERR: 1054:Unknown column 'item_title' in 'field list'
+ [ SQL语句 ] : SELECT `item_title` FROM `item_conf` ORDER BY id desc 
+ERR: 1054:Unknown column 'item_title' in 'field list'
+ [ SQL语句 ] : SELECT `item_title` FROM `item_conf` ORDER BY id desc 
+
+[ 2016-08-03T15:05:38+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000097s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000195s ]
+SQL: SHOW COLUMNS FROM `item_conf` [ RunTime:0.0891s ]
+ERR: 1054:Unknown column 'item_title' in 'field list'
+ [ SQL语句 ] : SELECT `id`,`item_title` FROM `item_conf` ORDER BY id desc 
+ERR: 1054:Unknown column 'item_title' in 'field list'
+ [ SQL语句 ] : SELECT `id`,`item_title` FROM `item_conf` ORDER BY id desc 
+
+[ 2016-08-03T15:05:51+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000111s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000104s ]
+SQL: SHOW COLUMNS FROM `item_conf` [ RunTime:0.0109s ]
+ERR: 1054:Unknown column 'item_title' in 'field list'
+ [ SQL语句 ] : SELECT `item_title` FROM `item_conf` ORDER BY id desc 
+ERR: 1054:Unknown column 'item_title' in 'field list'
+ [ SQL语句 ] : SELECT `item_title` FROM `item_conf` ORDER BY id desc 
+
+[ 2016-08-03T15:06:17+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000135s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000282s ]
+SQL: SHOW COLUMNS FROM `item_conf` [ RunTime:0.0019s ]
+ERR: 1054:Unknown column 'item_title' in 'field list'
+ [ SQL语句 ] : SELECT `item_title` FROM `item_conf` ORDER BY item_num desc 
+ERR: 1054:Unknown column 'item_title' in 'field list'
+ [ SQL语句 ] : SELECT `item_title` FROM `item_conf` ORDER BY item_num desc 
+
+[ 2016-08-03T15:06:38+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000180s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000063s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000141s ]
+SQL: SHOW COLUMNS FROM `item_conf` [ RunTime:0.0945s ]
+SQL: SELECT `item1_title` FROM `item_conf` ORDER BY item1_num desc  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000081s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000142s ]
+
+[ 2016-08-03T15:10:33+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000124s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000119s ]
+SQL: SHOW COLUMNS FROM `item_conf` [ RunTime:0.0088s ]
+SQL: SELECT `item1_title` FROM `item_conf` ORDER BY item1_num desc  [ RunTime:0.0001s ]
+ERR: Call to undefined function Home\Controller\assign()
+
+[ 2016-08-03T15:10:49+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000151s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000153s ]
+SQL: SHOW COLUMNS FROM `item_conf` [ RunTime:0.0010s ]
+SQL: SELECT `item1_title` FROM `item_conf` ORDER BY item1_num desc  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000112s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000178s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002663s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002726s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000061s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000113s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000049s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000108s ]
+
+[ 2016-08-03T15:45:27+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000201s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000066s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000156s ]
+ERR: 1146:Table 'winnerlook.item_conf' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `item_conf`
+ERR: 1146:Table 'winnerlook.item_conf' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `item_conf`
+
+[ 2016-08-03T15:48:20+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000252s ]
+ERR: 1146:Table 'winnerlook.item_conf' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `item_conf`
+ERR: 1146:Table 'winnerlook.item_conf' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `item_conf`
+
+[ 2016-08-03T15:48:34+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000172s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000086s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000231s ]
+ERR: 1146:Table 'winnerlook.item_conf' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `item_conf`
+ERR: 1146:Table 'winnerlook.item_conf' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `item_conf`
+
+[ 2016-08-03T15:48:44+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000255s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000268s ]
+ERR: 1146:Table 'winnerlook.item_conf' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `item_conf`
+ERR: 1146:Table 'winnerlook.item_conf' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `item_conf`
+
+[ 2016-08-03T15:49:02+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000120s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000052s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000125s ]
+SQL: SHOW COLUMNS FROM `item1_conf` [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000101s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000169s ]
+
+[ 2016-08-03T15:49:03+08:00 ] ::1 /mysite/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000110s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000106s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000171s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.061583s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.061669s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000068s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000125s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000042s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000098s ]
+
+[ 2016-08-03T15:49:03+08:00 ] ::1 /mysite/index.php/Home/Index/chkimg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000110s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000097s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000178s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000398s ]
+
+[ 2016-08-03T15:49:20+08:00 ] ::1 /mysite/index.php/Home/Index/chklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000052s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000208s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.124974s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.125177s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000169s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000278s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000112s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000225s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005766s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.000582s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000024s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006169s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000078s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000163s ]
+
+[ 2016-08-03T15:49:21+08:00 ] ::1 /mysite/index.php/Home/Index/chkimg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000110s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000096s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000157s ]
+
+[ 2016-08-03T15:49:30+08:00 ] ::1 /mysite/index.php/Home/Index/chklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000178s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000177s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000043s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000099s ]
+
+[ 2016-08-03T15:49:30+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000097s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000125s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000046s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000121s ]
+
+[ 2016-08-03T15:49:49+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000140s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item1_num,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000111s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000203s ]
+
+[ 2016-08-03T16:10:18+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000329s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000087s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000175s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item1_num,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+ERR: Call to undefined function Think\Template\simplexml_load_string()
+
+[ 2016-08-03T16:10:57+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000108s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000250s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item1_num,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+ERR: Call to undefined function Think\Template\simplexml_load_string()
+
+[ 2016-08-03T16:11:58+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000162s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000245s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item1_num,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+ERR: Call to undefined function Think\Template\simplexml_load_string()
+
+[ 2016-08-03T16:29:26+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.012185s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001048s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001155s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item1_num,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000183s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042891s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043150s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000884s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000967s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001057s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001150s ]
+
+[ 2016-08-03T16:30:04+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000153s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000096s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item1_num,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000162s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003520s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003619s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000164s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000253s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000458s ]
+
+[ 2016-08-03T16:30:22+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000188s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000307s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item1_num,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000200s ]
+NOTIC: [8] Array to string conversion /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Array to string conversion /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Array to string conversion /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Array to string conversion /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Array to string conversion /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Array to string conversion /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Array to string conversion /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005809s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005890s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000079s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000119s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000212s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000368s ]
+
+[ 2016-08-03T16:31:00+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000338s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000122s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000218s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item1_num,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000230s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005367s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005452s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000079s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000262s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000470s ]
+
+[ 2016-08-03T16:31:32+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000055s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000127s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item1_num,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002272s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002343s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000065s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000124s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000078s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000162s ]
+
+[ 2016-08-03T16:31:49+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000071s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000148s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item1_num,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000173s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006071s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006137s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000050s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000048s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000096s ]
+
+[ 2016-08-03T16:32:33+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000093s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item1_num,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000119s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045602s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045802s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000181s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000270s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000131s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000269s ]
+
+[ 2016-08-03T16:34:03+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000203s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000076s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000153s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item1_num,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003603s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003679s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000070s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000120s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000064s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000126s ]
+
+[ 2016-08-03T16:34:34+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000190s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000114s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item1_num,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000141s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003674s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003730s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000078s ]
+
+[ 2016-08-03T16:35:21+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000118s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000077s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item1_num,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000143s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003754s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003805s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000079s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000082s ]
+
+[ 2016-08-03T16:41:15+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000055s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000117s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item1_num,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000072s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000115s ]
+
+[ 2016-08-03T16:42:12+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000126s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000085s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000177s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item1_num,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000211s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000297s ]
+
+[ 2016-08-03T16:42:46+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000160s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000063s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000136s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item1_num,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000068s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000109s ]
+
+[ 2016-08-03T16:43:28+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000182s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000080s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000172s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item1_num,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: item2_num /var/www/html/mysite/Application/Home/Controller/IndexController.class.php 第 15 行.
+NOTIC: [8] Undefined index: item2_num /var/www/html/mysite/Application/Home/Controller/IndexController.class.php 第 15 行.
+NOTIC: [8] Undefined index: item2_num /var/www/html/mysite/Application/Home/Controller/IndexController.class.php 第 15 行.
+NOTIC: [8] Undefined index: item2_num /var/www/html/mysite/Application/Home/Controller/IndexController.class.php 第 15 行.
+NOTIC: [8] Undefined index: item2_num /var/www/html/mysite/Application/Home/Controller/IndexController.class.php 第 15 行.
+NOTIC: [8] Undefined index: item2_num /var/www/html/mysite/Application/Home/Controller/IndexController.class.php 第 15 行.
+NOTIC: [8] Undefined index: item2_num /var/www/html/mysite/Application/Home/Controller/IndexController.class.php 第 15 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000080s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000130s ]
+
+[ 2016-08-03T16:43:37+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000126s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000115s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item1_num,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000075s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000147s ]
+
+[ 2016-08-03T16:44:31+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000148s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000223s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000398s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item1_num,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000083s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000169s ]
+
+[ 2016-08-03T16:47:45+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000080s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000048s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000094s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000069s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000117s ]
+
+[ 2016-08-03T16:54:41+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000090s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000130s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000264s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000061s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000105s ]
+
+[ 2016-08-03T16:59:01+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000165s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000073s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000130s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000138s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000243s ]
+
+[ 2016-08-03T16:59:26+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000113s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000084s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+ERR: syntax error, unexpected 'else' (T_ELSE)
+
+[ 2016-08-03T17:00:29+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000133s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000073s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000164s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000194s ]
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005321s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005362s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000070s ]
+
+[ 2016-08-03T17:01:55+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000090s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000166s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003662s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003756s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000132s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000174s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000075s ]
+
+[ 2016-08-03T17:01:58+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000094s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000216s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000252s ]
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008522s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008627s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000066s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000126s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000096s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000185s ]
+
+[ 2016-08-03T17:02:49+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000186s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000125s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000108s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000197s ]
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003245s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003307s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000058s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000094s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000043s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000088s ]
+
+[ 2016-08-03T17:02:56+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000118s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000078s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002353s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002393s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000070s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000073s ]
+
+[ 2016-08-03T17:02:59+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000160s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000330s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000132s ]
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002550s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002595s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000077s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000171s ]
+
+[ 2016-08-03T17:05:21+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000115s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000176s ]
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004406s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004454s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000054s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000106s ]
+
+[ 2016-08-03T17:05:27+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000183s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000101s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+NOTIC: [8] Undefined index: items1_num /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003711s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003753s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000071s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000074s ]
+
+[ 2016-08-03T17:06:47+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000091s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000086s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000096s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000168s ]
+
+[ 2016-08-03T17:08:05+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000224s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000143s ]
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002991s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003069s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000065s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000077s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000143s ]
+
+[ 2016-08-03T17:08:27+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000077s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000175s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000181s ]
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003186s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003280s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000060s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000115s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000055s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000121s ]
+
+[ 2016-08-03T17:08:50+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000166s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000151s ]
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002978s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003034s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000066s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000122s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000142s ]
+
+[ 2016-08-03T17:09:04+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000124s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000132s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000160s ]
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002818s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002914s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000194s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000214s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000392s ]
+
+[ 2016-08-03T17:12:51+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000123s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000072s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000153s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000109s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000164s ]
+
+[ 2016-08-03T17:53:17+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000137s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000247s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000156s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048768s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048836s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000071s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000119s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000066s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000135s ]
+
+[ 2016-08-03T17:53:17+08:00 ] ::1 /mysite/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000187s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000048s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000115s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000169s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.075382s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.075504s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000086s ]
+
+[ 2016-08-03T17:53:17+08:00 ] ::1 /mysite/index.php/Home/Index/chkimg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000102s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000101s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000147s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000293s ]
+
+[ 2016-08-03T17:53:19+08:00 ] ::1 /mysite/index.php/Home/Index/chkimg/0.9106166766070263
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000267s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000091s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000188s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000148s ]
+
+[ 2016-08-03T17:53:25+08:00 ] ::1 /mysite/index.php/Home/Index/chklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000103s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000089s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000091s ]
+
+[ 2016-08-03T17:53:25+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000066s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000138s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000238s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003667s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003727s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000048s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000106s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000081s ]
+
+[ 2016-08-03T17:54:58+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000081s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000077s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000120s ]
+
+[ 2016-08-03T17:56:34+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000103s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000116s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000075s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000146s ]
+
+[ 2016-08-03T17:56:47+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000133s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000057s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000129s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000210s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003217s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003288s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000091s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000056s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000113s ]
+
+[ 2016-08-03T17:57:36+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000099s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000121s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000175s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003080s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003159s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000069s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000138s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000307s ]
+
+[ 2016-08-03T17:59:20+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000149s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000086s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003436s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003534s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000150s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000194s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000093s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000169s ]
+
+[ 2016-08-03T17:59:59+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000160s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000078s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000157s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000157s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000382s ]
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005657s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005711s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000089s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000051s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000114s ]
+
+[ 2016-08-03T18:06:38+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000096s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000153s ]
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002712s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002762s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000049s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000052s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000103s ]
+
+[ 2016-08-03T18:06:42+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000108s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000164s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000272s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000176s ]
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003601s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003691s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000086s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000179s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000312s ]
+
+[ 2016-08-03T18:06:56+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000363s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000085s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000168s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000141s ]
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004117s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004187s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000251s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000372s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000133s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000238s ]
+
+[ 2016-08-03T23:13:55+08:00 ] ::1 /mysite/index.php/home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.012188s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000887s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000957s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0994s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000145s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000255s ]
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055605s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055683s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005722s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005807s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.012753s ]
+INFO: [ app_end ] --END-- [ RunTime:0.012841s ]
+
+[ 2016-08-03T23:13:55+08:00 ] ::1 /mysite/index.php/home/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000171s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000160s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000123s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010642s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010700s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000115s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000051s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000103s ]
+
+[ 2016-08-03T23:13:55+08:00 ] ::1 /mysite/index.php/Home/Index/chkimg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000108s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000117s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000055s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000116s ]
+
+[ 2016-08-03T23:14:07+08:00 ] ::1 /mysite/index.php/Home/Index/chkimg/0.743933179247988
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000393s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000055s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000112s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000065s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000124s ]
+
+[ 2016-08-03T23:14:15+08:00 ] ::1 /mysite/index.php/Home/Index/chklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000218s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000126s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000054s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000119s ]
+
+[ 2016-08-03T23:14:15+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000099s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000094s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000196s ]
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005076s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005137s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000053s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000105s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000042s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000099s ]
+
+[ 2016-08-03T23:15:38+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000192s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000073s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000165s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005216s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005336s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000074s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000074s ]
+
+[ 2016-08-03T23:16:08+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000103s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000229s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000191s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000337s ]
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006892s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000063s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000119s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000057s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000117s ]
+
+[ 2016-08-03T23:19:02+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000204s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000085s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000187s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000150s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000273s ]
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006323s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006404s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000130s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000206s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000089s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000171s ]
+
+[ 2016-08-03T23:20:12+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000190s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000086s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000194s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000229s ]
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003960s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004060s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000060s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000111s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000049s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000107s ]
+
+[ 2016-08-03T23:21:05+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000127s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000117s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000178s ]
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002848s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002919s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000066s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000125s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000073s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000147s ]
+
+[ 2016-08-03T23:22:03+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000146s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000148s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000243s ]
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006862s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006962s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000061s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000124s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000076s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000151s ]
+
+[ 2016-08-03T23:23:23+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000121s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000235s ]
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004264s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004356s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000083s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000162s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000077s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000171s ]
+
+[ 2016-08-03T23:23:51+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000198s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000079s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000177s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000173s ]
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004991s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005048s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000099s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000130s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000239s ]
+
+[ 2016-08-03T23:27:10+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000187s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000084s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000174s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000259s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000381s ]
+
+[ 2016-08-03T23:34:34+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000101s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000234s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Home/Controller/IndexController.class.php 第 18 行.
+ERR: [] operator not supported for strings
+
+[ 2016-08-03T23:35:36+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000196s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000163s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Home/Controller/IndexController.class.php 第 18 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000154s ]
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004964s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005024s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000043s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000087s ]
+
+[ 2016-08-03T23:40:18+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000131s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000059s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000132s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Home/Controller/IndexController.class.php 第 18 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000142s ]
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002259s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002301s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000061s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000096s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000076s ]
+
+[ 2016-08-03T23:41:25+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000047s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000112s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000143s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000257s ]
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004637s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004735s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000067s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000134s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000046s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000099s ]
+
+[ 2016-08-03T23:42:26+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000217s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000091s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000199s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000139s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000274s ]
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006895s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000148s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000072s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000155s ]
+
+[ 2016-08-03T23:42:59+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000129s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000086s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000180s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000156s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000290s ]
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004984s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005175s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000183s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000055s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000117s ]
+
+[ 2016-08-03T23:44:59+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000184s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000107s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000239s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000181s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000375s ]
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010395s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010520s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000099s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000195s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000125s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000253s ]
+
+[ 2016-08-03T23:45:17+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000089s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000089s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000111s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000186s ]
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003232s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003311s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000102s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000078s ]
+
+[ 2016-08-03T23:45:31+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000170s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000143s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000179s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000299s ]
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009966s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010064s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000069s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000131s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000166s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000296s ]
+
+[ 2016-08-03T23:48:05+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000470s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000091s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000190s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000208s ]
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005579s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005645s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000058s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000129s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000056s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000117s ]
+
+[ 2016-08-03T23:48:29+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000154s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000073s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000162s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000240s ]
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004933s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005023s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000057s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000106s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000048s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000105s ]
+
+[ 2016-08-03T23:57:35+08:00 ] ::1 /mysite/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000117s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000260s ]
+SQL: select item1_conf.item1_num,item1_conf.item1_title,item2_conf.item2_title from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000233s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000443s ]
+NOTIC: [8] Undefined offset: -1 /var/www/html/mysite/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006851s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006978s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000078s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000171s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000142s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000251s ]
+
