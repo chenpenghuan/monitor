@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0" />
 <title>Bootstrap响应式登录界面模板</title>
 
-<link rel="stylesheet" type="text/css" href="/mysite/Public/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/monitor/Public/css/bootstrap.min.css" />
 
 <style type="text/css">
 html,body {
@@ -102,7 +102,7 @@ html,body {
 			</div>
 			<div class="login-content ">
 			<div class="form">
-			<form action="/mysite/index.php/Home/Index/chklogin" method="post">
+			<form action="/monitor/index.php/Home/Index/chklogin" method="post">
 				<div class="form-group">
 					<div class="col-xs-12  ">
 						<div class="input-group">
@@ -127,7 +127,7 @@ html,body {
 						</div>
 					</div>
 					<div class="col-xs-6  ">
-						<img class="form-control" src="/mysite/index.php/Home/Index/chkimg" onclick="this.src='/mysite/index.php/Home/Index/chkimg'+'/'+Math.random()"></span>
+						<img class="form-control" src="/monitor/index.php/Home/Index/chkimg" onclick="this.src='/monitor/index.php/Home/Index/chkimg'+'/'+Math.random()"></span>
 					</div>
 				</div>
 				<div class="form-group form-actions">

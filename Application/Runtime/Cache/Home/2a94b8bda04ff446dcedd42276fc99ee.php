@@ -2,11 +2,11 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link href="/mysite/Public/css/bootstrap.css" rel="stylesheet">
-	<script src="/mysite/Public/js/html5shiv.min.js"></script>
-	<script src="/mysite/Public/js/respond.min.js"></script>
-	<script src="/mysite/Public/js/zDialog.js"></script>
-	<script src="/mysite/Public/js/zDrag.js"></script>
+	<link href="/monitor/Public/css/bootstrap.css" rel="stylesheet">
+	<script src="/monitor/Public/js/html5shiv.min.js"></script>
+	<script src="/monitor/Public/js/respond.min.js"></script>
+	<script src="/monitor/Public/js/zDialog.js"></script>
+	<script src="/monitor/Public/js/zDrag.js"></script>
 	<style>
 		html {
 			-ms-text-size-adjust: 100%;
@@ -117,7 +117,7 @@
 			margin-bottom: 5px;
 		}
 		.navbar-brand {
-			background: url("/mysite/Public/images/ruyo_net_w_32.png") no-repeat 10px 8px;
+			background: url("/monitor/Public/images/ruyo_net_w_32.png") no-repeat 10px 8px;
 			display: inline-block;
 			vertical-align: middle;
 			padding-left: 50px;
@@ -160,7 +160,7 @@
 				}
 			}
 		}
-		xmlhttp.open("POST","/mysite/index.php/Home/Index/getajax",true);
+		xmlhttp.open("POST","/monitor/index.php/Home/Index/getajax",true);
 		xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");xmlhttp.send("func="+func);
 	}
 	function doaction(func){
@@ -188,7 +188,7 @@
 				}
 			}
 		}
-		xmlhttp.open("POST","/mysite/index.php/Home/Index/getajax",true);
+		xmlhttp.open("POST","/monitor/index.php/Home/Index/getajax",true);
 		xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 		xmlhttp.send("func="+func);
 	}
@@ -211,7 +211,7 @@
 				document.getElementById(outid).innerHTML="服务器不在家，请联系保姆！";
 			}
 		}
-		xmlhttp.open("POST","/mysite/index.php/Home/Index/"+url,true);
+		xmlhttp.open("POST","/monitor/index.php/Home/Index/"+url,true);
 		xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 		xmlhttp.send(all);
 	}
@@ -242,9 +242,9 @@
 		<div class="row">
 			<div class="col-md-2">
 				<ul id="main-nav" class="main-nav nav nav-tabs nav-stacked" style="">
-				<?php $__FOR_START_1753604728__=1;$__FOR_END_1753604728__=$items_max+1;for($i=$__FOR_START_1753604728__;$i < $__FOR_END_1753604728__;$i+=1){ if($items1[$i] != null): ?><li><a href="#<?php echo ($items1[$i]['title']); ?>" class="nav-header collapsed" data-toggle="collapse"><?php echo ($items1[$i]['title']); ?></a>
+				<?php $__FOR_START_1559303809__=1;$__FOR_END_1559303809__=$items_max+1;for($i=$__FOR_START_1559303809__;$i < $__FOR_END_1559303809__;$i+=1){ if($items1[$i] != null): ?><li><a href="#<?php echo ($items1[$i]['title']); ?>" class="nav-header collapsed" data-toggle="collapse"><?php echo ($items1[$i]['title']); ?></a>
 						<?php if($items2[$i] != null): ?><ul id="<?php echo ($items1[$i]['title']); ?>" class="nav nav-list secondmenu collapse" style="height: 0px;">
-							<?php $__FOR_START_1108848933__=0;$__FOR_END_1108848933__=$items2s[$i];for($n=$__FOR_START_1108848933__;$n < $__FOR_END_1108848933__;$n+=1){ ?><li><a href="#" onclick=foritems2("item2id=<?php echo ($items2[$i]['id'][$n]); ?>&act=list&url=/mysite/index.php/Home/Index/foritems2")><?php echo ($items2[$i]['title'][$n]); ?></a></li><?php } ?>
+							<?php $__FOR_START_1290014788__=0;$__FOR_END_1290014788__=$items2s[$i];for($n=$__FOR_START_1290014788__;$n < $__FOR_END_1290014788__;$n+=1){ ?><li><a href="#" onclick=foritems2("item2id=<?php echo ($items2[$i]['id'][$n]); ?>&act=list&url=/monitor/index.php/Home/Index/foritems2")><?php echo ($items2[$i]['title'][$n]); ?></a></li><?php } ?>
 							</ul><?php endif; endif; ?>
 					</li><?php } ?>
 				</ul>
@@ -254,7 +254,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="/mysite/Public/js/jquery.js"></script>
-	<script src="/mysite/Public/js/bootstrap.min.js"></script>
+	<script src="/monitor/Public/js/jquery.js"></script>
+	<script src="/monitor/Public/js/bootstrap.min.js"></script>
 </body>
 </html>
