@@ -206,7 +206,7 @@
 		}
 		xmlhttp.onreadystatechange=function(){
 			if (xmlhttp.readyState==4 && xmlhttp.status==200){
-					document.getElementById(outid).innerHTML=xmlhttp.responseText;
+				document.getElementById(outid).innerHTML=xmlhttp.responseText;
 			}else{
 				document.getElementById(outid).innerHTML="服务器不在家，请联系保姆！";
 			}
@@ -248,7 +248,7 @@
 						<if condition="$items2[$i] neq null">
 							<ul id="<{$items1[$i]['title']}>" class="nav nav-list secondmenu collapse" style="height: 0px;">
 							<for start="0" end="$items2s[$i]" name="n">
-								<li><a href="#" onclick=foritems2("item2id=<{$items2[$i]['id'][$n]}>&act=list&url=__URL__/foritems2")><{$items2[$i]['title'][$n]}></a></li>
+								<li><a href="#" onclick=foritems2("item2id=<{$items2[$i]['id'][$n]}>&item_type=2&act=list&url=__URL__/foritems2")><{$items2[$i]['title'][$n]}></a></li>
 							</for>
 							</ul>
 						</if>

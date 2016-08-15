@@ -206,7 +206,7 @@
 		}
 		xmlhttp.onreadystatechange=function(){
 			if (xmlhttp.readyState==4 && xmlhttp.status==200){
-					document.getElementById(outid).innerHTML=xmlhttp.responseText;
+				document.getElementById(outid).innerHTML=xmlhttp.responseText;
 			}else{
 				document.getElementById(outid).innerHTML="服务器不在家，请联系保姆！";
 			}
@@ -242,9 +242,9 @@
 		<div class="row">
 			<div class="col-md-2">
 				<ul id="main-nav" class="main-nav nav nav-tabs nav-stacked" style="">
-				<?php $__FOR_START_1559303809__=1;$__FOR_END_1559303809__=$items_max+1;for($i=$__FOR_START_1559303809__;$i < $__FOR_END_1559303809__;$i+=1){ if($items1[$i] != null): ?><li><a href="#<?php echo ($items1[$i]['title']); ?>" class="nav-header collapsed" data-toggle="collapse"><?php echo ($items1[$i]['title']); ?></a>
+				<?php $__FOR_START_2115886489__=1;$__FOR_END_2115886489__=$items_max+1;for($i=$__FOR_START_2115886489__;$i < $__FOR_END_2115886489__;$i+=1){ if($items1[$i] != null): ?><li><a href="#<?php echo ($items1[$i]['title']); ?>" class="nav-header collapsed" data-toggle="collapse"><?php echo ($items1[$i]['title']); ?></a>
 						<?php if($items2[$i] != null): ?><ul id="<?php echo ($items1[$i]['title']); ?>" class="nav nav-list secondmenu collapse" style="height: 0px;">
-							<?php $__FOR_START_1290014788__=0;$__FOR_END_1290014788__=$items2s[$i];for($n=$__FOR_START_1290014788__;$n < $__FOR_END_1290014788__;$n+=1){ ?><li><a href="#" onclick=foritems2("item2id=<?php echo ($items2[$i]['id'][$n]); ?>&act=list&url=/monitor/index.php/Home/Index/foritems2")><?php echo ($items2[$i]['title'][$n]); ?></a></li><?php } ?>
+							<?php $__FOR_START_580601106__=0;$__FOR_END_580601106__=$items2s[$i];for($n=$__FOR_START_580601106__;$n < $__FOR_END_580601106__;$n+=1){ ?><li><a href="#" onclick=foritems2("item2id=<?php echo ($items2[$i]['id'][$n]); ?>&item_type=2&act=list&url=/monitor/index.php/Home/Index/foritems2")><?php echo ($items2[$i]['title'][$n]); ?></a></li><?php } ?>
 							</ul><?php endif; endif; ?>
 					</li><?php } ?>
 				</ul>

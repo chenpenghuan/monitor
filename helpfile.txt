@@ -1,0 +1,2 @@
+1. 按item的id整理一份相关的json数组
+2.按item的id输出json，修改时也是按json格式进行审核
