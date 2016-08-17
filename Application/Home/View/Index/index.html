@@ -7,6 +7,7 @@
 	<script src="__PUBLIC__/js/respond.min.js"></script>
 	<script src="__PUBLIC__/js/zDialog.js"></script>
 	<script src="__PUBLIC__/js/zDrag.js"></script>
+	<script src="__PUBLIC__/js/my.js"></script>
 	<style>
 		html {
 			-ms-text-size-adjust: 100%;
@@ -192,7 +193,7 @@
 		xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 		xmlhttp.send("func="+func);
 	}
-	function foritems2(all,url="foritems2",outid="result",warn="N",warnword="确定吗？"){
+	function foritems2(all,url="foritems2",outid="result",warn="N",warnword="确定吗？",add="正在加载。。。"){
 		if(warn=="Y"){
 			if(!confirm(warnword)){
 				return false;
@@ -206,9 +207,11 @@
 		}
 		xmlhttp.onreadystatechange=function(){
 			if (xmlhttp.readyState==4 && xmlhttp.status==200){
-				document.getElementById(outid).innerHTML=xmlhttp.responseText;
+				//document.getElementById(outid).innerHTML=xmlhttp.responseText;
+				set_innerHTML(outid,xmlhttp.responseText);
 			}else{
-				document.getElementById(outid).innerHTML="服务器不在家，请联系保姆！";
+				//document.getElementById(outid).innerHTML=add;
+				set_innerHTML(outid,add);
 			}
 		}
 		xmlhttp.open("POST","__URL__/"+url,true);
@@ -223,7 +226,7 @@
 			}
 		}
 		//alert("item2id=6&act=saveadd"+"&itm_name="+document.getElementById("itm_name").value+"&itm_type="+itm_type+"&itm_id="+document.getElementById("itm_id").value+"&itm_belo="+document.getElementById("itm_belo").value+"&itm_from="+document.getElementById("itm_from").value+"&itm_cols="+document.getElementById("itm_cols").value);
-		foritems2(all="act=saveadd&item2id=6"+"&itm_name="+document.getElementById("itm_name").value+"&itm_type="+itm_type+"&itm_id="+document.getElementById("itm_id").value+"&itm_belo="+document.getElementById("itm_belo").value+"&itm_from="+document.getElementById("itm_from").value+"&itm_cols="+document.getElementById("itm_cols").value,url="foritems2",outid="message");
+		foritems2(all="act=saveadd&item2id=6"+"&itm_name="+document.getElementById("itm_name").value+"&itm_type="+itm_type+"&itm_id="+document.getElementById("itm_id").value+"&itm_belo="+document.getElementById("itm_belo").value+"&itm_from="+document.getElementById("itm_from").value,url="foritems2",outid="message",warn="N",warnword="确定吗？",add="数据库插入错误，请检查添加信息！");
 	}
 </script>
 	<div class="navbar navbar-duomi navbar-static-top" role="navigation">
@@ -233,7 +236,7 @@
 				</a>
 			</div>
 			<div class="navbar-right">
-				<span class="navbar-brand" style="background:none">欢迎使用 [<a href="logout">退出</a>]
+				<span class="navbar-brand" style="background:none">欢迎使用 [<a id="logout" href="logout">退出</a>]
 				</span>
 			</div>
 		</div>

@@ -7,6 +7,7 @@
 	<script src="/monitor/Public/js/respond.min.js"></script>
 	<script src="/monitor/Public/js/zDialog.js"></script>
 	<script src="/monitor/Public/js/zDrag.js"></script>
+	<script src="/monitor/Public/js/my.js"></script>
 	<style>
 		html {
 			-ms-text-size-adjust: 100%;
@@ -192,7 +193,7 @@
 		xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 		xmlhttp.send("func="+func);
 	}
-	function foritems2(all,url="foritems2",outid="result",warn="N",warnword="确定吗？"){
+	function foritems2(all,url="foritems2",outid="result",warn="N",warnword="确定吗？",add="正在加载。。。"){
 		if(warn=="Y"){
 			if(!confirm(warnword)){
 				return false;
@@ -206,9 +207,11 @@
 		}
 		xmlhttp.onreadystatechange=function(){
 			if (xmlhttp.readyState==4 && xmlhttp.status==200){
-				document.getElementById(outid).innerHTML=xmlhttp.responseText;
+				//document.getElementById(outid).innerHTML=xmlhttp.responseText;
+				set_innerHTML(outid,xmlhttp.responseText);
 			}else{
-				document.getElementById(outid).innerHTML="服务器不在家，请联系保姆！";
+				//document.getElementById(outid).innerHTML=add;
+				set_innerHTML(outid,add);
 			}
 		}
 		xmlhttp.open("POST","/monitor/index.php/Home/Index/"+url,true);
@@ -223,7 +226,7 @@
 			}
 		}
 		//alert("item2id=6&act=saveadd"+"&itm_name="+document.getElementById("itm_name").value+"&itm_type="+itm_type+"&itm_id="+document.getElementById("itm_id").value+"&itm_belo="+document.getElementById("itm_belo").value+"&itm_from="+document.getElementById("itm_from").value+"&itm_cols="+document.getElementById("itm_cols").value);
-		foritems2(all="act=saveadd&item2id=6"+"&itm_name="+document.getElementById("itm_name").value+"&itm_type="+itm_type+"&itm_id="+document.getElementById("itm_id").value+"&itm_belo="+document.getElementById("itm_belo").value+"&itm_from="+document.getElementById("itm_from").value+"&itm_cols="+document.getElementById("itm_cols").value,url="foritems2",outid="message");
+		foritems2(all="act=saveadd&item2id=6"+"&itm_name="+document.getElementById("itm_name").value+"&itm_type="+itm_type+"&itm_id="+document.getElementById("itm_id").value+"&itm_belo="+document.getElementById("itm_belo").value+"&itm_from="+document.getElementById("itm_from").value,url="foritems2",outid="message",warn="N",warnword="确定吗？",add="数据库插入错误，请检查添加信息！");
 	}
 </script>
 	<div class="navbar navbar-duomi navbar-static-top" role="navigation">
@@ -233,7 +236,7 @@
 				</a>
 			</div>
 			<div class="navbar-right">
-				<span class="navbar-brand" style="background:none">欢迎使用 [<a href="logout">退出</a>]
+				<span class="navbar-brand" style="background:none">欢迎使用 [<a id="logout" href="logout">退出</a>]
 				</span>
 			</div>
 		</div>
@@ -242,9 +245,9 @@
 		<div class="row">
 			<div class="col-md-2">
 				<ul id="main-nav" class="main-nav nav nav-tabs nav-stacked" style="">
-				<?php $__FOR_START_2115886489__=1;$__FOR_END_2115886489__=$items_max+1;for($i=$__FOR_START_2115886489__;$i < $__FOR_END_2115886489__;$i+=1){ if($items1[$i] != null): ?><li><a href="#<?php echo ($items1[$i]['title']); ?>" class="nav-header collapsed" data-toggle="collapse"><?php echo ($items1[$i]['title']); ?></a>
+				<?php $__FOR_START_678430240__=1;$__FOR_END_678430240__=$items_max+1;for($i=$__FOR_START_678430240__;$i < $__FOR_END_678430240__;$i+=1){ if($items1[$i] != null): ?><li><a href="#<?php echo ($items1[$i]['title']); ?>" class="nav-header collapsed" data-toggle="collapse"><?php echo ($items1[$i]['title']); ?></a>
 						<?php if($items2[$i] != null): ?><ul id="<?php echo ($items1[$i]['title']); ?>" class="nav nav-list secondmenu collapse" style="height: 0px;">
-							<?php $__FOR_START_580601106__=0;$__FOR_END_580601106__=$items2s[$i];for($n=$__FOR_START_580601106__;$n < $__FOR_END_580601106__;$n+=1){ ?><li><a href="#" onclick=foritems2("item2id=<?php echo ($items2[$i]['id'][$n]); ?>&item_type=2&act=list&url=/monitor/index.php/Home/Index/foritems2")><?php echo ($items2[$i]['title'][$n]); ?></a></li><?php } ?>
+							<?php $__FOR_START_501561126__=0;$__FOR_END_501561126__=$items2s[$i];for($n=$__FOR_START_501561126__;$n < $__FOR_END_501561126__;$n+=1){ ?><li><a href="#" onclick=foritems2("item2id=<?php echo ($items2[$i]['id'][$n]); ?>&item_type=2&act=list&url=/monitor/index.php/Home/Index/foritems2")><?php echo ($items2[$i]['title'][$n]); ?></a></li><?php } ?>
 							</ul><?php endif; endif; ?>
 					</li><?php } ?>
 				</ul>
