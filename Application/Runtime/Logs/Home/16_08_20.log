@@ -1,0 +1,26 @@
+[ 2016-08-20T00:04:16+08:00 ] ::1 /monitor/index.php/Home/Index/foritems2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000090s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000084s ]
+SQL: select * from cont_conf order by item_id [ RunTime:0.0001s ]
+SQL: select item1_conf.id as item1_id,item1_conf.item1_num,item1_conf.item1_title,item1_chan,item2_conf.id,item2_conf.item2_title,item2_conf.item2_num,item2_chan from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+NOTIC: [8] Undefined offset: 5 /var/www/html/monitor/Application/Home/Controller/IndexController.class.php 第 15 行.
+NOTIC: [8] Undefined variable: items2 /var/www/html/monitor/Application/Home/Controller/IndexController.class.php 第 36 行.
+NOTIC: [8] Undefined offset: 4 /var/www/html/monitor/Application/Home/Controller/IndexController.class.php 第 36 行.
+
+[ 2016-08-20T00:04:17+08:00 ] ::1 /monitor/index.php/Home/Index/foritems2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000026s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+SQL: select * from cont_conf order by item_id [ RunTime:0.0001s ]
+SQL: select item1_conf.id as item1_id,item1_conf.item1_num,item1_conf.item1_title,item1_chan,item2_conf.id,item2_conf.item2_title,item2_conf.item2_num,item2_chan from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc [ RunTime:0.0001s ]
+NOTIC: [8] Undefined offset: 5 /var/www/html/monitor/Application/Home/Controller/IndexController.class.php 第 15 行.
+NOTIC: [8] Undefined variable: items2 /var/www/html/monitor/Application/Home/Controller/IndexController.class.php 第 36 行.
+NOTIC: [8] Undefined offset: 4 /var/www/html/monitor/Application/Home/Controller/IndexController.class.php 第 36 行.
+

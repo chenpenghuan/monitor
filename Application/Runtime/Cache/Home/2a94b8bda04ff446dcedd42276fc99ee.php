@@ -211,10 +211,11 @@
 				set_innerHTML(outid,xmlhttp.responseText);
 			}else{
 				//document.getElementById(outid).innerHTML=add;
+				//foritems2(all,url,outid,warn,warnword,add);
 				set_innerHTML(outid,add);
 			}
 		}
-		xmlhttp.open("POST","/monitor/index.php/Home/Index/"+url,true);
+		xmlhttp.open("POST","/monitor/index.php/Home/Index/"+url,false);//控制ajax请求为异步还是同步
 		xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 		xmlhttp.send(all);
 	}
@@ -227,6 +228,16 @@
 		}
 		//alert("item2id=6&act=saveadd"+"&itm_name="+document.getElementById("itm_name").value+"&itm_type="+itm_type+"&itm_id="+document.getElementById("itm_id").value+"&itm_belo="+document.getElementById("itm_belo").value+"&itm_from="+document.getElementById("itm_from").value+"&itm_cols="+document.getElementById("itm_cols").value);
 		foritems2(all="act=saveadd&item2id=6"+"&itm_name="+document.getElementById("itm_name").value+"&itm_type="+itm_type+"&itm_id="+document.getElementById("itm_id").value+"&itm_belo="+document.getElementById("itm_belo").value+"&itm_from="+document.getElementById("itm_from").value,url="foritems2",outid="message",warn="N",warnword="确定吗？",add="数据库插入错误，请检查添加信息！");
+	}
+	function saveedit(){
+		var checkbox=document.getElementsByName("optionsRadios");
+		for(var i=0;i<checkbox.length;i++){
+			if(checkbox[i].checked){
+				var itm_type=checkbox[i].value;
+			}
+		}
+		//alert("act=saveedit&item2id=6"+"&itm_title="+document.getElementById("itm_name").value+"&itm_type="+itm_type+"&itm_id="+document.getElementById("itm_id").value+"&itm_belo="+document.getElementById("itm_belo").value+"&itm_from="+document.getElementById("itm_from").value);
+		foritems2(all="act=saveedit&item2id=6"+"&itm_name="+document.getElementById("itm_name").value+"&itm_type="+itm_type+"&itm_num="+document.getElementById("itm_num").value+"&itm_belo="+document.getElementById("itm_belo").value+"&itm_id="+document.getElementById("itm_id").value+"&itm_from="+document.getElementById("itm_from").value,url="foritems2",outid="message",warn="Y",warnword="确定提交吗？",add="数据库错误，请检查添加信息！");
 	}
 </script>
 	<div class="navbar navbar-duomi navbar-static-top" role="navigation">
@@ -245,10 +256,12 @@
 		<div class="row">
 			<div class="col-md-2">
 				<ul id="main-nav" class="main-nav nav nav-tabs nav-stacked" style="">
-				<?php $__FOR_START_678430240__=1;$__FOR_END_678430240__=$items_max+1;for($i=$__FOR_START_678430240__;$i < $__FOR_END_678430240__;$i+=1){ if($items1[$i] != null): ?><li><a href="#<?php echo ($items1[$i]['title']); ?>" class="nav-header collapsed" data-toggle="collapse"><?php echo ($items1[$i]['title']); ?></a>
-						<?php if($items2[$i] != null): ?><ul id="<?php echo ($items1[$i]['title']); ?>" class="nav nav-list secondmenu collapse" style="height: 0px;">
-							<?php $__FOR_START_501561126__=0;$__FOR_END_501561126__=$items2s[$i];for($n=$__FOR_START_501561126__;$n < $__FOR_END_501561126__;$n+=1){ ?><li><a href="#" onclick=foritems2("item2id=<?php echo ($items2[$i]['id'][$n]); ?>&item_type=2&act=list&url=/monitor/index.php/Home/Index/foritems2")><?php echo ($items2[$i]['title'][$n]); ?></a></li><?php } ?>
-							</ul><?php endif; endif; ?>
+				<?php $__FOR_START_1300028510__=1;$__FOR_END_1300028510__=$items_max+1;for($i=$__FOR_START_1300028510__;$i < $__FOR_END_1300028510__;$i+=1){ if($items1[$i] != null): if($items2[$i] != null): ?><li><a href="#<?php echo ($items1[$i]['title']); ?>" class="nav-header collapsed" data-toggle="collapse"><?php echo ($items1[$i]['title']); ?></a>
+							<ul id="<?php echo ($items1[$i]['title']); ?>" class="nav nav-list secondmenu collapse" style="height: 0px;">
+							<?php $__FOR_START_1177500202__=0;$__FOR_END_1177500202__=$items2s[$i];for($n=$__FOR_START_1177500202__;$n < $__FOR_END_1177500202__;$n+=1){ ?><li><a href="#" onclick=foritems2("item2id=<?php echo ($items2[$i]['id'][$n]); ?>&item_type=2&act=list&url=/monitor/index.php/Home/Index/foritems2")><?php echo ($items2[$i]['title'][$n]); ?></a></li><?php } ?>
+							</ul>
+						<?php else: ?>
+							<li><a href="#" class="nav-header collapsed" data-toggle="collapse" onclick=foritems2("item1id=<?php echo ($items1[$i]['id']); ?>&item_type=1&act=list&url=/monitor/index.php/Home/Index/foritems2")><?php echo ($items1[$i]['title']); ?></a><?php endif; endif; ?>
 					</li><?php } ?>
 				</ul>
 			</div>
