@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="__PUBLIC__/css/bootstrap.css" rel="stylesheet">
+	<script src="__PUBLIC__/js/html5shiv.min.js"></script>
+	<script src="__PUBLIC__/js/respond.min.js"></script>
+	<style>
+		html {
+			-ms-text-size-adjust: 100%;
+			-webkit-text-size-adjust: 100%;
+		}
+		body {
+			font-family: 'Microsoft Yahei', '微软雅黑', '宋体', \5b8b\4f53, Tahoma, Arial, Helvetica, STHeiti;
+			margin: 0;
+		}
+		.nav ul li{
+			background:#BDBDBD;
+			font-size:0.5cm;
+			line-height:0.5cm;
+		}
+	</style>
+</head>
+
+<body>
+<script>
+	function loadXMLDoc(func){
+		var xmlhttp;
+		if(window.XMLHttpRequest){
+			xmlhttp=new XMLHttpRequest();
+		}else{
+			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		xmlhttp.onreadystatechange=function(){
+			if (xmlhttp.readyState==4 && xmlhttp.status==200){
+				document.getElementById("result").innerHTML=xmlhttp.responseText;
+			}
+		}
+	xmlhttp.open("POST","__URL__/getajax",true);
+	xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");xmlhttp.send("func="+func);
+}
+</script>
+<div class="nav navbar"></div>
+	<div class="container container-fluid">
+		<ul class="nav nav-tabs" role="tablist">
+			<li role="presentation"><a href="#">Home</a></li>
+			<li role="presentation"><a href="#">SVN</a></li>
+			<li role="presentation"><a href="#">iOS</a></li>
+			<li role="presentation"><a href="#">VB.Net</a></li>
+			<li role="presentation"><a href="#">Java</a></li>
+			<li role="presentation"><a href="#">PHP</a></li>
+		</ul>
+	</div>
+<div class="container">
+	123123
+</div>
+	<script src="__PUBLIC__/js/jquery.js"></script>
+	<script src="__PUBLIC__/js/bootstrap.min.js"></script>
+</body>
+</html>
