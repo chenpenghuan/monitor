@@ -123,7 +123,7 @@ class IndexController extends Controller {
 							if ($confs[$items2[$key]['id'][$i]]) {
 								$datafrom = stripslashes(json_encode($confs[$items2[$key]['id'][$i]], JSON_UNESCAPED_UNICODE));
 							}
-							$tds .= '<tr><td>' . $items2[$key]['title'][$i] . '/' . $items2[$key]['num'][$i] . '</td><td style="font-size:10px;width:60%;">' . $datafrom . '</td><!--<td>状态</td>--><td><div class="btn-group btn-group-xs">' . $btn1 . '</div></td></tr>';
+							$tds .= '<tr><td>' . $items2[$key]['title'][$i] . '/' . $items2[$key]['num'][$i] . '</td><td style="font-size:10px;width:60%;word-wrap: break-word;word-break:break-all;">' . $datafrom . '</td><!--<td>状态</td>--><td><div class="btn-group btn-group-xs">' . $btn1 . '</div></td></tr>';
 						}
 						$tbbody .= '<tr><td rowspan="' . ($itm_c + 1) . '">' . $value['title'] . '/' . $value['id'] . '</td></tr>' . $tds;
 					} else {
@@ -276,7 +276,7 @@ class IndexController extends Controller {
 
 				}
 				//var_dump($_POST);
-				$dtfm = stripslashes(json_encode($confs[$_POST['item_id']], JSON_UNESCAPED_UNICODE));
+				$dtfm = stripslashes(json_encode($confs[$_POST['item_id']], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
 				$str_form = '<form class="form-horizontal" role="form" style="padding-left:10%;padding-top:3%;width:80%;">
                             <div class="form-group">
                                 <label for="firstname" class="col-sm-2 control-label">菜单名</label>
@@ -304,6 +304,8 @@ class IndexController extends Controller {
                             <div class="form-group" style="display:none">
                                 <div class="col-sm-10">
                                     <input type="number" class="form-control" id="itm_id" value="' . $_POST['item_id'] . '">
+                                    <input type="hidden" id="old_itm_sec" value="' . $_POST['item_num'] . '">
+                                    <input type="hidden" id="old_itm_type" value="' . $_POST['item_type'] . '">
                                 </div>
                             </div>
                             <div id="belong" class="form-group" style="' . $display . '">
@@ -316,7 +318,7 @@ class IndexController extends Controller {
                             <div class="form-group">
                                 <label for="lastname" class="col-sm-2 control-label">数据来源</label>
                                 <div class="col-sm-10">
-                                   	<textarea style="font-size:0.3cm;" class="form-control" id="itm_from"  rows="6"  value="">' . $dtfm . '</textarea>
+                                   	<textarea style="font-size:0.3cm;word-wrap: break-word;word-break:break-all;" class="form-control" id="itm_from"  rows="6"  value="">' . $dtfm . '</textarea>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -331,43 +333,81 @@ class IndexController extends Controller {
 				exit();
 			case 'saveedit':
 				//var_dump($_POST);
+				/*
 				if ($_POST['itm_type'] == '1') {
+					var_dump($_POST);
 				} else {
-					$result = 0;
-					$tb = M();
-					$json = json_decode($_POST['itm_from'], true);
-					if ($tb->execute('update item2_conf set item2_title="' . $_POST['itm_name'] . '",item1_num=' . $_POST['itm_belo'] . ' where id=' . $_POST['itm_id'])) {
-						echo '修改栏目信息成功';
+					var_dump($_POST);
+				}
+				*/
+				$result = 0;
+				$tb = M();
+				$json = json_decode($_POST['itm_from'], true);
+				if ($_POST['itm_type'] == $_POST['old_itm_type']) {
+					if ($_POST['itm_type'] == '1') {
+						$sql = 'update item' . $_POST['itm_type'] . '_conf set item' . $_POST['itm_type'] . '_title="' . $_POST['itm_name'] . '" where id=' . $_POST['itm_id'];
+					} else {
+						$sql = 'update item' . $_POST['itm_type'] . '_conf set item' . $_POST['itm_type'] . '_title="' . $_POST['itm_name'] . '",item1_num=' . $_POST['itm_belo'] . ' where id=' . $_POST['itm_id'];
 					}
+					if ($tb->execute($sql)) {
+						$msg = '修改栏目信息成功<br>';
+					} else {
+						$msg = '栏目信息没有任何修改<br>';
+					}
+				} else {
 					$tb->startTrans();
-					if ($json) {
-						$json_c = count($json);
-						for ($i = 0; $i < $json_c; $i++) {
-							if ($json[$i]['id']) {
-								if ($json[$i]['act'] == 'del') {
-									$sql = 'delete from cont_conf where id=' . $json[$i]['id'];
-								} else {
-									$sql = 'update cont_conf set cont_sec=' . $json[$i]['cont_sec'] . ',cont_title="' . $json[$i]['cont_title'] . '",cont_var="' . $json[$i]['cont_var'] . '",cont_url="' . $json[$i]['cont_url'] . '" where id=' . $json[$i]['id'];
-								}
-							} else {
-								$sql = 'insert into cont_conf(item_id,cont_sec,cont_title,cont_var,cont_url,item_type) values(' . $_POST['itm_id'] . ',' . $json[$i]['cont_sec'] . ',"' . $json[$i]['cont_title'] . '","' . $json[$i]['cont_var'] . '","' . $json[$i]['cont_url'] . '",' . $_POST['itm_type'] . ')';
-							}
-							if ($tb->execute($sql)) {
-								$result = 1;
-							}
-						}
+					if ($_POST['old_itm_type'] == '1') {
+						//菜单类型由一级改为二级
+						//var_dump($_POST);
+						$sql1 = 'insert into item2_conf(item1_num,item2_num,item2_title) values(' . $_POST['itm_belo'] . ',' . $_POST['itm_num'] . ',"' . $_POST['itm_name'] . '")';
+						//$sql1 = 'select max(id) from item1_conf';
+						//$sql2 = 'delete from item1_conf where id=' . $items1[$_POST['old_itm_sec']]['id'];
+						$sql2 = 'delete from item1_conf where id=' . $_POST['itm_id'];
+						//$sql3 = 'update cont_conf set item_id=(select max(id) from item2_conf),item_type=2 where item_id=' . $items1[$_POST['old_itm_sec']]['id'];
+						$sql3 = 'update cont_conf set item_id=(select max(id) from item2_conf),item_type=2 where item_id=' . $_POST['itm_id'];
 					} else {
-						echo 'json内容或格式错误，请检查！';
-						exit();
+						//菜单类型由二级改为一级
+						$sql1 = 'insert into item1_conf(item1_num,item1_title) values(' . $_POST['itm_num'] . ',"' . $_POST['itm_name'] . '")';
+						$sql2 = 'delete from item2_conf where id=' . $_POST['itm_id'];
+						$sql3 = 'update cont_conf set item_id=(select max(id) from item1_conf),item_type=1 where item_id=' . $_POST['itm_id'];
 					}
-					if ($result == 0) {
-						$tb->rollback();
-						echo '没有做任何修改';
-					} else {
+					if ($tb->execute($sql1) && $tb->execute($sql2) && $tb->execute($sql3)) {
 						$tb->commit();
-						echo '已经更新';
+						$msg = '修改栏目信息成功<br>';
+					} else {
+						$tb->rollback();
+						$msg = '栏目信息没有任何修改<br>';
 					}
 				}
+				$tb->startTrans();
+				if ($json) {
+					$json_c = count($json);
+					for ($i = 0; $i < $json_c; $i++) {
+						if ($json[$i]['id']) {
+							if ($json[$i]['act'] == 'del') {
+								$sql = 'delete from cont_conf where id=' . $json[$i]['id'];
+							} else {
+								$sql = 'update cont_conf set cont_sec=' . $json[$i]['cont_sec'] . ',cont_title="' . $json[$i]['cont_title'] . '",cont_var="' . $json[$i]['cont_var'] . '",cont_url="' . $json[$i]['cont_url'] . '" where id=' . $json[$i]['id'];
+							}
+						} else {
+							$sql = 'insert into cont_conf(item_id,cont_sec,cont_title,cont_var,cont_url,item_type) values(' . $_POST['itm_id'] . ',' . $json[$i]['cont_sec'] . ',"' . $json[$i]['cont_title'] . '","' . $json[$i]['cont_var'] . '","' . $json[$i]['cont_url'] . '",' . $_POST['itm_type'] . ')';
+						}
+						if ($tb->execute($sql)) {
+							$result = 1;
+						}
+					}
+				} else {
+					$msg .= 'json内容或格式错误，请检查！<br>';
+					exit();
+				}
+				if ($result == 0) {
+					$tb->rollback();
+					$msg .= '该菜单字段没有做任何修改<br>';
+				} else {
+					$tb->commit();
+					$msg .= '配置已经更新<br>';
+				}
+				echo $msg;
 				exit();
 			default:
 				echo '这里是默认的输出';
@@ -409,6 +449,8 @@ class IndexController extends Controller {
 			}
 			$select = '<div class="form-group"> <div class="input-group col-xs-12"><span class="input-group-btn"><select id="colname" class="form-control" style="width: auto;">' . $select . '</select></span><input type="text" name="keyword" id="keyword" class="form-control" placeholder="请输入关键词" value="' . $_POST['search'] . '"><span class="input-group-btn"><button class="btn btn-success" onclick=foritems2("item' . $item_type . 'id=' . $item_id . '&item_type=' . $item_type . '&act=list&selected="+document.getElementById(\'colname\').value+"&search="+document.getElementById(\'keyword\').value+"&page=' . $_POST['page'] . '&url=' . $_POST['url'] . '")>搜索</button></span></div></div>';
 			echo $select;
+			//echo U('Search/hello');
+			//var_dump($_POST);
 			//var_dump($max_id);
 			$tb_head .= '<th style="text-align:center">更新时间</th></tr></thead>';
 			$where = substr($where, 0, -1);
@@ -454,21 +496,9 @@ class IndexController extends Controller {
 				$trs .= '</tr>';
 			}
 			echo $tb_head . $trs . '</table>';
-			//echo '<ul class="pagination"><li><a href="#">&laquo;</a></li><li><a href="#">1</a></li><li><a href="#">2</a></li><li><a href="#">3</a></li><li><a href="#">4</a></li><li><a href="#">5</a></li><li><a href="#">&raquo;</a></li></ul>';
 			echo '<a href="#">上一页</a><input type="text" id="page" value="' . $_POST['page'] . '" onkeydown="javascript:if (event.keyCode==13) foritems2(\'item' . $item_type . 'id=' . $item_id . '&item_type=' . $item_type . '&act=list&selected=\'+document.getElementById(\'colname\').value+\'&search=\'+document.getElementById(\'keyword\').value+\'&page=\'+document.getElementById(\'page\').value+\'&url=' . $_POST['url'] . '\')"><a href="#">下一页</a>';
 			exit();
 		}
-	}
-	public function createimg() {
-		import("Org.Util.Chart");
-		$chart = new \Chart();
-		$title = ""; //标题
-		$data = array(20, 27, 45, 75, 90, 10, 80, 100); //数据
-		$size = 500; //尺寸
-		$width = 750; //宽度
-		$height = 350; //高度
-		$legend = array("哥哥 ", "bbbb", "cccc", "dddd ", "eeee", "ffff", "gggg", "hhhh"); //说明
-		$chart->createcolumnar($title, $data, $size, $height, $width, $legend);
 	}
 	public function test() {
 		$table = M('pass_config');
@@ -476,7 +506,7 @@ class IndexController extends Controller {
 	}
 	public function readjson() {
 		//echo json_encode(array('name' =>'陈鹏欢','sex'=>'男','age'=>21,'test'=>'这部分是测试内容' ),JSON_UNESCAPED_UNICODE);
-		$cont_confs = M()->query('select * from cont_conf order by item_id');
+		$cont_confs = M()->query('select id,item_id,cont_sec,cont_title,cont_var,cont_url,item_type from cont_conf order by item_id');
 		$cont_confs_c = count($cont_confs);
 		//最大的item_id
 		$max_item_id = $cont_confs[$cont_confs_c - 1]['item_id'];

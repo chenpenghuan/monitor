@@ -1,9 +1,8 @@
 <?php
 return array(
-	//'配置项'=>'配置值'
-	'TMPL_L_DELIM' => '<{',
-	'TMPL_R_DELIM' => '}>',
+	//'配置项'=>'配置值',
 	//'URL_INDEX' => 'http://localhost/monitor/home/index/index/#1',
+	//'DEFAULT_C_LAYER' => 'Search',
 	'URL_INDEX' => '/monitor/home/index/index',
 	//'URL_STATUS' => 'http://localhost/monitor/home/index/chkstatus',
 	'URL_STATUS' => '/monitor/home/index/chkstatus',

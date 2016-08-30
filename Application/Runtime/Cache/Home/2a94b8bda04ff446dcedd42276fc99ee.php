@@ -237,7 +237,7 @@
 			}
 		}
 		//alert("act=saveedit&item2id=6"+"&itm_title="+document.getElementById("itm_name").value+"&itm_type="+itm_type+"&itm_id="+document.getElementById("itm_id").value+"&itm_belo="+document.getElementById("itm_belo").value+"&itm_from="+document.getElementById("itm_from").value);
-		foritems2(all="act=saveedit&item2id=6"+"&itm_name="+document.getElementById("itm_name").value+"&itm_type="+itm_type+"&itm_num="+document.getElementById("itm_num").value+"&itm_belo="+document.getElementById("itm_belo").value+"&itm_id="+document.getElementById("itm_id").value+"&itm_from="+document.getElementById("itm_from").value,url="foritems2",outid="message",warn="Y",warnword="确定提交吗？",add="数据库错误，请检查添加信息！");
+		foritems2(all="act=saveedit&item2id=6"+"&itm_name="+document.getElementById("itm_name").value+"&itm_type="+itm_type+"&itm_num="+document.getElementById("itm_num").value+"&itm_belo="+document.getElementById("itm_belo").value+"&itm_id="+document.getElementById("itm_id").value+"&old_itm_sec="+document.getElementById("old_itm_sec").value+"&old_itm_type="+document.getElementById("old_itm_type").value+"&itm_from="+document.getElementById("itm_from").value,url="foritems2",outid="message",warn="Y",warnword="确定提交吗？",add="数据库错误，请检查添加信息！");
 	}
 </script>
 	<div class="navbar navbar-duomi navbar-static-top" role="navigation">
@@ -256,9 +256,9 @@
 		<div class="row">
 			<div class="col-md-2">
 				<ul id="main-nav" class="main-nav nav nav-tabs nav-stacked" style="">
-				<?php $__FOR_START_1300028510__=1;$__FOR_END_1300028510__=$items_max+1;for($i=$__FOR_START_1300028510__;$i < $__FOR_END_1300028510__;$i+=1){ if($items1[$i] != null): if($items2[$i] != null): ?><li><a href="#<?php echo ($items1[$i]['title']); ?>" class="nav-header collapsed" data-toggle="collapse"><?php echo ($items1[$i]['title']); ?></a>
+				<?php $__FOR_START_2058843408__=1;$__FOR_END_2058843408__=$items_max+1;for($i=$__FOR_START_2058843408__;$i < $__FOR_END_2058843408__;$i+=1){ if($items1[$i] != null): if($items2[$i] != null): ?><li><a href="#<?php echo ($items1[$i]['title']); ?>" class="nav-header collapsed" data-toggle="collapse"><?php echo ($items1[$i]['title']); ?></a>
 							<ul id="<?php echo ($items1[$i]['title']); ?>" class="nav nav-list secondmenu collapse" style="height: 0px;">
-							<?php $__FOR_START_1177500202__=0;$__FOR_END_1177500202__=$items2s[$i];for($n=$__FOR_START_1177500202__;$n < $__FOR_END_1177500202__;$n+=1){ ?><li><a href="#" onclick=foritems2("item2id=<?php echo ($items2[$i]['id'][$n]); ?>&item_type=2&act=list&url=/monitor/index.php/Home/Index/foritems2")><?php echo ($items2[$i]['title'][$n]); ?></a></li><?php } ?>
+							<?php $__FOR_START_1004676103__=0;$__FOR_END_1004676103__=$items2s[$i];for($n=$__FOR_START_1004676103__;$n < $__FOR_END_1004676103__;$n+=1){ ?><li><a href="#" onclick=foritems2("item2id=<?php echo ($items2[$i]['id'][$n]); ?>&item_type=2&act=list&url=/monitor/index.php/Home/Index/foritems2")><?php echo ($items2[$i]['title'][$n]); ?></a></li><?php } ?>
 							</ul>
 						<?php else: ?>
 							<li><a href="#" class="nav-header collapsed" data-toggle="collapse" onclick=foritems2("item1id=<?php echo ($items1[$i]['id']); ?>&item_type=1&act=list&url=/monitor/index.php/Home/Index/foritems2")><?php echo ($items1[$i]['title']); ?></a><?php endif; endif; ?>
