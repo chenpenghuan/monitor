@@ -142,61 +142,7 @@
 <body>
 <script>
 	var xmlhttp;
-	function loadXMLDoc(func){
-		xmlhttp=null;
-		if(window.XMLHttpRequest){
-			xmlhttp=new XMLHttpRequest();
-		}else{
-			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-		}
-		xmlhttp.onreadystatechange=function(){
-			if (xmlhttp.readyState==4 && xmlhttp.status==200){
-				if(func=='passmonit'){
-					document.getElementById("result").innerHTML=xmlhttp.responseText;
-				}else{
-					var diag = new Dialog();
-					diag.Width = 750;
-					diag.Height = 350;
-					diag.Title = '内容页为html代码的窗口';
-					diag.InnerHtml=xmlhttp.responseText;
-					diag.OKEvent = function(){diag.close();};//点击确定后调用的方法
-					diag.show();
-				}
-			}
-		}
-		xmlhttp.open("POST","__URL__/getajax",true);
-		xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");xmlhttp.send("func="+func);
-	}
-	function doaction(func){
-		xmlhttp=null;
-		if(window.XMLHttpRequest){
-			xmlhttp=new XMLHttpRequest();
-		}else{
-			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-		}
-		xmlhttp.onreadystatechange=function(){
-			if (xmlhttp.readyState==4 && xmlhttp.status==200){
-				/*
-				if(xmlhttp.responseText==1 || xmlhttp.responseText==2){
-					if(xmlhttp.responseText==1){
-						document.getElementById("setmanu").innerHTML="手动测试";
-					}else{
-						document.getElementById("setmanu").innerHTML="自动测试";
-					}
-				*/
-				if(xmlhttp.responseText==1){
-					alert('已发送短信！');
-				}else{
-					//alert("设置失败，请联系系统管理员！")
-					alert(xmlhttp.responseText)
-				}
-			}
-		}
-		xmlhttp.open("POST","__URL__/getajax",true);
-		xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-		xmlhttp.send("func="+func);
-	}
-	function foritems2(all,url="foritems2",outid="result",warn="N",warnword="确定吗？",add="正在加载。。。"){
+	function foritems2(all,url="__URL__/foritems2",outid="result",warn="N",warnword="确定吗？",add="正在加载。。。"){
 		if(warn=="Y"){
 			if(!confirm(warnword)){
 				return false;
@@ -210,15 +156,12 @@
 		}
 		xmlhttp.onreadystatechange=function(){
 			if (xmlhttp.readyState==4 && xmlhttp.status==200){
-				//document.getElementById(outid).innerHTML=xmlhttp.responseText;
 				set_innerHTML(outid,xmlhttp.responseText);
 			}else{
-				//document.getElementById(outid).innerHTML=add;
-				//foritems2(all,url,outid,warn,warnword,add);
 				set_innerHTML(outid,add);
 			}
 		}
-		xmlhttp.open("POST","__URL__/"+url,false);//控制ajax请求为异步还是同步
+		xmlhttp.open("POST",url,false);//控制ajax请求为异步还是同步
 		xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 		xmlhttp.send(all);
 	}
@@ -240,14 +183,8 @@
 			}
 		}
 		//alert("act=saveedit&item2id=6"+"&itm_title="+document.getElementById("itm_name").value+"&itm_type="+itm_type+"&itm_id="+document.getElementById("itm_id").value+"&itm_belo="+document.getElementById("itm_belo").value+"&itm_from="+document.getElementById("itm_from").value);
-		foritems2(all="act=saveedit&item2id=6"+"&itm_name="+document.getElementById("itm_name").value+"&itm_type="+itm_type+"&itm_num="+document.getElementById("itm_num").value+"&itm_belo="+document.getElementById("itm_belo").value+"&itm_id="+document.getElementById("itm_id").value+"&old_itm_sec="+document.getElementById("old_itm_sec").value+"&old_itm_type="+document.getElementById("old_itm_type").value+"&itm_from="+document.getElementById("itm_from").value,url="foritems2",outid="message",warn="Y",warnword="确定提交吗？",add="数据库错误，请检查添加信息！");
+		foritems2(all="act=saveedit&item2id=6"+"&itm_name="+document.getElementById("itm_name").value+"&itm_type="+itm_type+"&itm_num="+document.getElementById("itm_num").value+"&itm_belo="+document.getElementById("itm_belo").value+"&itm_id="+document.getElementById("itm_id").value+"&old_itm_sec="+document.getElementById("old_itm_sec").value+"&old_itm_type="+document.getElementById("old_itm_type").value+"&itm_from="+document.getElementById("itm_from").value,url="__URL__/foritems2",outid="message",warn="Y",warnword="确定提交吗？",add="数据库错误，请检查添加信息！");
 	}
-	$(function(){
-	$('#datePicker').date_input();
-	$('#datePicker2').date_input();
-	$('#datePicker3').date_input();
-	$('#datePicker4').date_input();
-	})
 </script>
 	<div class="navbar navbar-duomi navbar-static-top" role="navigation">
 		<div class="container-fluid">
@@ -280,6 +217,17 @@
 					</if>
 					</li>
 				</for>
+				<li>
+					<a href="#报警设置"  class="nav-header collapsed" data-toggle="collapse">报警区域</a>
+					<ul id="报警设置" class="nav nav-list secondmenu collapse" style="height: 0px;">
+						<li>
+							<a href="#"  onclick=foritems2(all="123123",url="__APP__/warn/readwarn",outid="result",warn="N",warnword="确定吗？",add="正在加载。。。")>报警设置</a>
+						</li>
+						<li>
+							<a href="#"  onclick=foritems2(all="123123",url="__APP__/warn/readhist",outid="result",warn="N",warnword="确定吗？",add="正在加载。。。")>报警记录</a>
+						</li>
+					</ul>
+				</li>
 				</ul>
 			</div>
 			<div class="col-md-10" id="result">

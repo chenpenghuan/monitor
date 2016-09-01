@@ -97,12 +97,17 @@ class IndexController extends Controller {
 	}
 
 	public function foritems2() {
+		//var_dump($_POST);
 		$this->chkstatus();
 		$this->index($display = 0);
 		$confs = F('confs');
 		$items1 = F('items1');
 		$items2 = F('items2');
-		if ($_POST['item2id'] == 6) {
+		if (in_array($_POST['item2id'], $items2[5]['id'])) {
+			if ($_POST['item2id'] == '16') {
+				echo '这里是报警设置';
+				exit();
+			}
 			switch ($_POST['act']) {
 			case 'list':
 				$tbhead = '<div id="delmsg"><table  class="table table-bordered table-hover definewidth m10" style="font-size:12px;"><thead><tr><th style="width:7.5%">一级菜单/序号</th><th style="width:7.5%">二级菜单/序号</th><th style="text-align:center">数据来源</th><!--<th style="width:3.2%">状态</th>--><th  style="width:7%">管理/<button onclick=foritems2("item2id=6&act=add") type="button" class="btn btn-xs">新建</button></th></tr></thead>';
@@ -436,7 +441,6 @@ class IndexController extends Controller {
 				exit();
 			}
 		} else {
-			//var_dump($_POST);
 			if (array_key_exists('item2id', $_POST)) {
 				$item_type = 2;
 				$item_id = $_POST['item2id'];
