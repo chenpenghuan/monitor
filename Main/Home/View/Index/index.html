@@ -8,6 +8,9 @@
 	<script src="__PUBLIC__/js/zDialog.js"></script>
 	<script src="__PUBLIC__/js/zDrag.js"></script>
 	<script src="__PUBLIC__/js/my.js"></script>
+	<script src="__PUBLIC__/laydate/laydate.js"></script>
+	<script src="__PUBLIC__/js/jquery-3.1.0.min.js"></script>
+	<script src="__PUBLIC__/js/bootstrap.js"></script>
 	<style>
 		html {
 			-ms-text-size-adjust: 100%;
@@ -227,7 +230,7 @@
 			}
 		}
 		//alert("item2id=6&act=saveadd"+"&itm_name="+document.getElementById("itm_name").value+"&itm_type="+itm_type+"&itm_id="+document.getElementById("itm_id").value+"&itm_belo="+document.getElementById("itm_belo").value+"&itm_from="+document.getElementById("itm_from").value+"&itm_cols="+document.getElementById("itm_cols").value);
-		foritems2(all="act=saveadd&item2id=6"+"&itm_name="+document.getElementById("itm_name").value+"&itm_type="+itm_type+"&itm_id="+document.getElementById("itm_id").value+"&itm_belo="+document.getElementById("itm_belo").value+"&itm_from="+document.getElementById("itm_from").value,url="foritems2",outid="message",warn="N",warnword="确定吗？",add="数据库插入错误，请检查添加信息！");
+		foritems2(all="act=saveadd&item2id=6"+"&itm_name="+document.getElementById("itm_name").value+"&itm_type="+itm_type+"&itm_id="+document.getElementById("itm_id").value+"&itm_belo="+document.getElementById("itm_belo").value+"&itm_from="+document.getElementById("itm_from").value,url="foritems2",outid="message",warn="N",warnword="确定吗？",add="正在执行。。。");
 	}
 	function saveedit(){
 		var checkbox=document.getElementsByName("optionsRadios");
@@ -239,6 +242,12 @@
 		//alert("act=saveedit&item2id=6"+"&itm_title="+document.getElementById("itm_name").value+"&itm_type="+itm_type+"&itm_id="+document.getElementById("itm_id").value+"&itm_belo="+document.getElementById("itm_belo").value+"&itm_from="+document.getElementById("itm_from").value);
 		foritems2(all="act=saveedit&item2id=6"+"&itm_name="+document.getElementById("itm_name").value+"&itm_type="+itm_type+"&itm_num="+document.getElementById("itm_num").value+"&itm_belo="+document.getElementById("itm_belo").value+"&itm_id="+document.getElementById("itm_id").value+"&old_itm_sec="+document.getElementById("old_itm_sec").value+"&old_itm_type="+document.getElementById("old_itm_type").value+"&itm_from="+document.getElementById("itm_from").value,url="foritems2",outid="message",warn="Y",warnword="确定提交吗？",add="数据库错误，请检查添加信息！");
 	}
+	$(function(){
+	$('#datePicker').date_input();
+	$('#datePicker2').date_input();
+	$('#datePicker3').date_input();
+	$('#datePicker4').date_input();
+	})
 </script>
 	<div class="navbar navbar-duomi navbar-static-top" role="navigation">
 		<div class="container-fluid">

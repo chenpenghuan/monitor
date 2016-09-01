@@ -37,9 +37,6 @@ class IndexController extends Controller {
 		}
 		F('items1', $items1);
 		F('items2', $items2);
-		/*
-			        var_dump($items2);
-		*/
 		if ($display == 1) {
 			$this->assign('items_max', $items_max);
 			$this->assign('items1', $items1);
@@ -345,7 +342,20 @@ class IndexController extends Controller {
 				$json = json_decode($_POST['itm_from'], true);
 				if ($_POST['itm_type'] == $_POST['old_itm_type']) {
 					if ($_POST['itm_type'] == '1') {
-						$sql = 'update item' . $_POST['itm_type'] . '_conf set item' . $_POST['itm_type'] . '_title="' . $_POST['itm_name'] . '" where id=' . $_POST['itm_id'];
+						$sql = 'update item' . $_POST['itm_type'] . '_conf set item' . $_POST['itm_type'] . '_title="' . $_POST['itm_name'] . '",item1_num=' . $_POST['itm_num'] . ' where id=' . $_POST['itm_id'];
+						$num = '';
+						$isin = 0;
+						//var_dump($items1[$_POST['old_itm_sec']]['num']);
+						foreach ($items1 as $k => $v) {
+							$num .= $v['num'] . '、';
+							if ($_POST['itm_num'] == $v['num'] && $_POST['itm_num'] != $items1[$_POST['old_itm_sec']]['num']) {
+								$isin = 1;
+							}
+						}
+						if ($isin == 1) {
+							echo '执行失败：<br>您输入的菜单序号已被占用，一级菜单不允许菜单序号重复，被占用的菜单序号如下：' . substr($num, 0, -3);
+							exit();
+						}
 					} else {
 						$sql = 'update item' . $_POST['itm_type'] . '_conf set item' . $_POST['itm_type'] . '_title="' . $_POST['itm_name'] . '",item1_num=' . $_POST['itm_belo'] . ' where id=' . $_POST['itm_id'];
 					}
@@ -370,6 +380,18 @@ class IndexController extends Controller {
 						$sql1 = 'insert into item1_conf(item1_num,item1_title) values(' . $_POST['itm_num'] . ',"' . $_POST['itm_name'] . '")';
 						$sql2 = 'delete from item2_conf where id=' . $_POST['itm_id'];
 						$sql3 = 'update cont_conf set item_id=(select max(id) from item1_conf),item_type=1 where item_id=' . $_POST['itm_id'];
+						$num = '';
+						$isin = 0;
+						foreach ($items1 as $k => $v) {
+							$num .= $v['num'] . '、';
+							if ($_POST['itm_num'] == $v['num']) {
+								$isin = 1;
+							}
+						}
+						if ($isin == 1) {
+							echo '执行失败：<br>您输入的菜单序号已被占用，一级菜单不允许菜单序号重复，被占用的菜单序号如下：' . substr($num, 0, -3);
+							exit();
+						}
 					}
 					if ($tb->execute($sql1) && $tb->execute($sql2) && $tb->execute($sql3)) {
 						$tb->commit();
@@ -447,6 +469,8 @@ class IndexController extends Controller {
 				}
 				$where .= $title[$i]['id'] . ',';
 			}
+			//带日历
+			//$select = '<div class="form-group"> <div class="input-group col-xs-12"><span class="input-group-btn"><select id="colname" class="form-control" style="width: auto;">' . $select . '</select></span><input class="laydate-icon" onclick="laydate()"><input type="text" name="keyword" id="keyword" style="width:500px;" class="form-control" placeholder="请输入关键词" value="' . $_POST['search'] . '"><span class="input-group-btn"><button class="btn btn-success" onclick=foritems2("item' . $item_type . 'id=' . $item_id . '&item_type=' . $item_type . '&act=list&selected="+document.getElementById(\'colname\').value+"&search="+document.getElementById(\'keyword\').value+"&page=' . $_POST['page'] . '&url=' . $_POST['url'] . '")>搜索</button></span></div></div>';
 			$select = '<div class="form-group"> <div class="input-group col-xs-12"><span class="input-group-btn"><select id="colname" class="form-control" style="width: auto;">' . $select . '</select></span><input type="text" name="keyword" id="keyword" class="form-control" placeholder="请输入关键词" value="' . $_POST['search'] . '"><span class="input-group-btn"><button class="btn btn-success" onclick=foritems2("item' . $item_type . 'id=' . $item_id . '&item_type=' . $item_type . '&act=list&selected="+document.getElementById(\'colname\').value+"&search="+document.getElementById(\'keyword\').value+"&page=' . $_POST['page'] . '&url=' . $_POST['url'] . '")>搜索</button></span></div></div>';
 			echo $select;
 			//echo U('Search/hello');
@@ -480,6 +504,12 @@ class IndexController extends Controller {
 			$trs = '';
 			foreach ($data2 as $k => $v) {
 				//var_dump($v);
+				if ($_POST['selected'] and $_POST['search'] != '') {
+					//var_dump($v[$_POST['selected']]);
+					if (!stristr($v[$_POST['selected']], $_POST['search'])) {
+						continue;
+					}
+				}
 				$trs .= '<tr>';
 				foreach ($title as $k2 => $v2) {
 					foreach ($v as $k3 => $v3) {
