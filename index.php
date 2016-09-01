@@ -20,7 +20,9 @@ if (version_compare(PHP_VERSION, '5.3.0', '<')) {
 define('APP_DEBUG', True);
 
 // 定义应用目录
-define('APP_PATH', './mons/');
+define('APP_PATH', './Main/');
+//绑定入口模块
+//define('BIND_MODULE', 'Home');
 
 // 引入ThinkPHP入口文件
 require './ThinkPHP/ThinkPHP.php';
