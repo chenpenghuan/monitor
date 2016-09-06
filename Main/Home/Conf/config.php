@@ -8,6 +8,7 @@ return array(
 	'URL_STATUS' => '/monitor/index/chkstatus',
 	'URL_LOGIN' => '/monitor/index/login',
 	'URL_PUBLIC' => '/monitor/Public',
+	'MOD_WARN' => '/monitor/warn',
 	'TMPL_L_DELIM' => '<{',
 	'TMPL_R_DELIM' => '}>',
 	'DB_TYPE' => 'mysql',
