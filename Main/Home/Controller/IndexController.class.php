@@ -4,6 +4,11 @@ use Think\Controller;
 
 class IndexController extends Controller {
 	public function index($display = 1) {
+		//提前加载报警模块的数据
+		$wf = M()->query('select id,warn_type,warn_prog,warn_conf,warn_send from warn_conf');
+		F('warn_conf', $wf);
+		$wc = M()->query('select warn_cont.id,warn_cont.warn_date,warn_conf.warn_type,warn_cont.warn_cont from warn_cont left join warn_conf on warn_conf.id=warn_cont.warn_id');
+		F('warn_cont',$wc);
 		$this->chkstatus();
 		$this->readjson();
 		$item_conf = M();

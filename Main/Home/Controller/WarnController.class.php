@@ -5,7 +5,8 @@ use Think\Controller;
 class WarnController extends Controller {
 	//读取报警相关配置
 	public function readwarn() {
-		$wf = M()->query('select id,warn_type,warn_prog,warn_conf,warn_send from warn_conf');
+		//$wf = M()->query('select id,warn_type,warn_prog,warn_conf,warn_send from warn_conf');
+		$wf=F('warn_conf');
 		$tbhead = '<div id="delmsg"><table  class="table table-bordered table-hover definewidth m10" style="font-size:12px;"><thead><tr><th>报警ID</th><th>报警类型</th><th>报警程序</th><th>配置文件</th><th>联系人</th><th>管理/<button onclick=create_warn()>新建</button></th></tr></thead>';
 		$trs = '';
 		foreach ($wf as $k => $v) {
@@ -13,7 +14,6 @@ class WarnController extends Controller {
 		}
 		$tbfoot = '</table></div><div id="create_warn"></div>';
 		echo $tbhead . $trs . $tbfoot;
-		F('warn_conf', $wf);
 		exit();
 	}
 	//编辑已有报警设置
@@ -63,7 +63,7 @@ class WarnController extends Controller {
 	}
 	//读取报警记录
 	public function readhist() {
-		$wc = M()->query('select warn_cont.id,warn_cont.warn_date,warn_conf.warn_type,warn_cont.warn_cont from warn_cont left join warn_conf on warn_conf.id=warn_cont.warn_id');
+		$wc=F('warn_cont');
 		$tbhead = '<div id="delmsg"><table  class="table table-bordered table-hover definewidth m10" style="font-size:12px;"><thead><tr><th>报警ID</th><th>报警日期</th><th>报警类型</th><th>报警内容</th></tr></thead>';
 		$trs = '';
 		foreach ($wc as $k => $v) {
