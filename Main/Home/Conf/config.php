@@ -18,4 +18,5 @@ return array(
 	'DB_PWD' => '123123',
 	'DB_PORT' => '3306',
 	'DB_PREFIX' => '', //设置表前缀
+    'STATUSFILE'=>'/home/cph/jsons/conf_status.json',//设置状态配置文件路径
 );
