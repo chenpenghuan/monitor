@@ -90,7 +90,6 @@ class IndexController extends Controller {
 
 	public function chkstatus() {
 		if (!isset($_SESSION['username'])) {
-			//header('Location:'.C('URL_LOGIN'));
 			echo '<script>alert("登录超时!");window.location.href="' . C('URL_LOGIN') . '";</script>';
 			exit();
 		}
@@ -125,6 +124,9 @@ class IndexController extends Controller {
 					}
 					if ($confs[$value['id']]) {
 						$datafrom = stripslashes(json_encode($confs[$value['id']]));
+					}else{
+						//修复栏目列表中json串出现复用的问题
+						$datafrom='';
 					}
 					$tbbody .= '<tr><td>' . $value['title'] . '/' . $value['num'] . '</td><td></td><td>' . $datafrom . '</td><!--<td>状态</td>--><td><div class="btn-group btn-group-xs">' . $btn2 . '</div></td></tr>';
 				}
@@ -133,20 +135,12 @@ class IndexController extends Controller {
 			return $tbhead . $tbbody . $tbfoot;
 	}
 	public function foritems2() {
-		//var_dump($_POST);
 		$this->chkstatus();
 		$this->index($display = 0);
 		$confs = F('confs');
 		$items1 = F('items1');
 		$items2 = F('items2');
 		if (in_array($_POST['item2id'], $items2[5]['id'])) {
-			/*
-			*设置报警设置栏目不允许修改
-			if ($_POST['item2id'] == '16') {
-				echo '这里是报警设置';
-				exit();
-			}
-			*/
 			switch ($_POST['act']) {
 			case 'list':
 				echo $this->itemlist($confs,$items1,$items2);
@@ -269,8 +263,6 @@ class IndexController extends Controller {
 				echo $str_form;
 				exit();
 			case 'edititem':
-				//var_dump($items1);
-				//var_dump($_POST);
 				if ($_POST['item_type'] == 1) {
 					$checked1 = 'checked';
 					$display = 'display:none';
@@ -290,7 +282,6 @@ class IndexController extends Controller {
 					}
 
 				}
-				//var_dump($_POST);
 				$dtfm = stripslashes(json_encode($confs[$_POST['item_id']], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
 				$str_form = '<form class="form-horizontal" role="form" style="padding-left:10%;padding-top:3%;width:80%;">
                             <div class="form-group">
@@ -347,14 +338,6 @@ class IndexController extends Controller {
 				//var_dump($_POST);
 				exit();
 			case 'saveedit':
-				//var_dump($_POST);
-				/*
-				if ($_POST['itm_type'] == '1') {
-					var_dump($_POST);
-				} else {
-					var_dump($_POST);
-				}
-				*/
 				$result = 0;
 				$tb = M();
 				$json = json_decode($_POST['itm_from'], true);
@@ -387,7 +370,6 @@ class IndexController extends Controller {
 					$tb->startTrans();
 					if ($_POST['old_itm_type'] == '1') {
 						//菜单类型由一级改为二级
-						//var_dump($_POST);
 						$sql1 = 'insert into item2_conf(item1_num,item2_num,item2_title) values(' . $_POST['itm_belo'] . ',' . $_POST['itm_num'] . ',"' . $_POST['itm_name'] . '")';
 						//$sql1 = 'select max(id) from item1_conf';
 						//$sql2 = 'delete from item1_conf where id=' . $items1[$_POST['old_itm_sec']]['id'];
@@ -472,7 +454,6 @@ class IndexController extends Controller {
 				echo '库中没有数据可供显示';
 				exit();
 			}
-			//var_dump($title);
 			$title_c = count($title);
 			$tb_head = '<table  class="table table-bordered table-hover definewidth m10" style="font-size:12px;"><thead><tr>';
 			$max_id = '';
@@ -489,28 +470,18 @@ class IndexController extends Controller {
 				}
 				$where .= $title[$i]['id'] . ',';
 			}
-			//带日历
-			//$select = '<div class="form-group"> <div class="input-group col-xs-12"><span class="input-group-btn"><select id="colname" class="form-control" style="width: auto;">' . $select . '</select></span><input class="laydate-icon" onclick="laydate()"><input type="text" name="keyword" id="keyword" style="width:500px;" class="form-control" placeholder="请输入关键词" value="' . $_POST['search'] . '"><span class="input-group-btn"><button class="btn btn-success" onclick=foritems2("item' . $item_type . 'id=' . $item_id . '&item_type=' . $item_type . '&act=list&selected="+document.getElementById(\'colname\').value+"&search="+document.getElementById(\'keyword\').value+"&page=' . $_POST['page'] . '&url=' . $_POST['url'] . '")>搜索</button></span></div></div>';
+			//搜索框
 			$select = '<div class="form-group"> <div class="input-group col-xs-12"><span class="input-group-btn"><select id="colname" class="form-control" style="width: auto;">' . $select . '</select></span><input type="text" name="keyword" id="keyword" class="form-control" placeholder="请输入关键词" value="' . $_POST['search'] . '"><span class="input-group-btn"><button class="btn btn-success" onclick=foritems2("item' . $item_type . 'id=' . $item_id . '&item_type=' . $item_type . '&act=list&selected="+document.getElementById(\'colname\').value+"&search="+document.getElementById(\'keyword\').value+"&page=' . $_POST['page'] . '&url=' . $_POST['url'] . '")>搜索</button></span></div></div>';
 			echo $select;
-			//echo U('Search/hello');
-			//var_dump($_POST);
-			//var_dump($max_id);
 			$tb_head .= '<th style="text-align:center">更新时间</th></tr></thead>';
 			$where = substr($where, 0, -1);
 			$data = M()->query('select cont_id,cont_text,update_sec,update_date from contents where isshow=1 and cont_id in (' . $where . ')  order by update_sec desc');
 			$data_c = count($data);
 			//var_dump($data);
 			for ($i = 0; $i < $data_c; $i++) {
-				/*
-					for ($m = 0; $m < $data[0]['update_sec']; $m++) {
-						$data[$i][$m];
-					}
-				*/
 				$data2[$data[$i]['update_sec']][$data[$i]['cont_id']] = $data[$i]['cont_text'];
 				$data2[$data[$i]['update_sec']]['date'] = $data[$i]['update_date'];
 			}
-			//var_dump($data2);
 			$data2_c = count($data2);
 			for ($m = 1; $m < $data2_c + 1; $m++) {
 				//var_dump($data2[$m]);
@@ -520,10 +491,8 @@ class IndexController extends Controller {
 					}
 				}
 			}
-			//var_dump($data2);
 			$trs = '';
 			foreach ($data2 as $k => $v) {
-				//var_dump($v);
 				if ($_POST['selected'] and $_POST['search'] != '') {
 					//var_dump($v[$_POST['selected']]);
 					if (!stristr($v[$_POST['selected']], $_POST['search'])) {
@@ -555,7 +524,6 @@ class IndexController extends Controller {
 		echo $table->where(array('setmanu' => 0))->find()['setmanu'];
 	}
 	public function readjson() {
-		//echo json_encode(array('name' =>'陈鹏欢','sex'=>'男','age'=>21,'test'=>'这部分是测试内容' ),JSON_UNESCAPED_UNICODE);
 		$cont_confs = M()->query('select id,item_id,cont_sec,cont_title,cont_var,cont_url,item_type from cont_conf order by item_id');
 		$cont_confs_c = count($cont_confs);
 		//最大的item_id
@@ -567,14 +535,9 @@ class IndexController extends Controller {
 			unset($v['item_type']);
 			$confs[$item_id][] = $v;
 		}
-		//header('Content-type: application/json');
 		header('Content-type: text/json');
 		$jsons = stripslashes(json_encode($confs, JSON_UNESCAPED_UNICODE));
-		/*
-			var_dump(json_decode($jsons,true)[2]);
-		*/
 		F('confs', $confs);
-		//var_dump($confs);
 	}
 	public function fromzp() {
 		header('Content-type: text/json');
