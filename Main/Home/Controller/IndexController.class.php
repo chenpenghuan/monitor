@@ -515,7 +515,7 @@ class IndexController extends Controller {
 				$trs .= '</tr>';
 			}
 			echo $tb_head . $trs . '</table>';
-			echo '<a href="#">上一页</a><input type="text" id="page" value="' . $_POST['page'] . '" onkeydown="javascript:if (event.keyCode==13) foritems2(\'item' . $item_type . 'id=' . $item_id . '&item_type=' . $item_type . '&act=list&selected=\'+document.getElementById(\'colname\').value+\'&search=\'+document.getElementById(\'keyword\').value+\'&page=\'+document.getElementById(\'page\').value+\'&url=' . $_POST['url'] . '\')"><a href="#">下一页</a>';
+			//echo '<a href="#">上一页</a><input type="text" id="page" value="' . $_POST['page'] . '" onkeydown="javascript:if (event.keyCode==13) foritems2(\'item' . $item_type . 'id=' . $item_id . '&item_type=' . $item_type . '&act=list&selected=\'+document.getElementById(\'colname\').value+\'&search=\'+document.getElementById(\'keyword\').value+\'&page=\'+document.getElementById(\'page\').value+\'&url=' . $_POST['url'] . '\')"><a href="#">下一页</a>';
 			exit();
 		}
 	}
