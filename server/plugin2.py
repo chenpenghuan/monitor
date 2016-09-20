@@ -41,7 +41,7 @@ class Recieve(object):
             name,add=parseaddr(nameadd)
             msg = MIMEText(content, 'plain', 'utf-8')
             msg['From'] = formataddr((Header(fromuser,'utf-8').encode(),'13919636933@139.com'))
-            #msg['To'] = formataddr((Header(touser,'utf-8').encode(),str(toaddrs)))
+            msg['To'] = formataddr((Header(touser,'utf-8').encode(),'857516325@qq.com'))
             msg['Subject']=Header(title,'utf-8').encode()
             server = smtplib.SMTP('smtp.139.com', 25) # SMTP协议默认端口是25
             server.set_debuglevel(0)
@@ -64,11 +64,10 @@ class Recieve(object):
                 try:
                     conts = loads(jsonstr)
                     if int(conts.get('warn_level')) > 0:
-                        sql = 'insert into warn_cont(warn_id,warn_cont,warn_date,warn_level) values(' + msg['channel'].decode('utf-8') + ',"' + conts['warn_cont'] + '","'+strftime("%Y-%m-%d %H:%M:%S",localtime(time()))+'",'+str(conts['warn_level'])+')'
-                        #下面是错的sql，用来测试容错
-                        #sql = 'insert int warn_cont(warn_id,warn_cont,warn_date,warn_level) values(' + msg['channel'].decode('utf-8') + ',"' + conts['warn_cont'] + '","'+strftime("%Y-%m-%d %H:%M:%S",localtime(time()))+'",'+str(conts['warn_level'])+')'
+                        #sql = 'insert into warn_cont(warn_id,warn_cont,warn_date,warn_level) values(' + msg['channel'].decode('utf-8') + ',"' + conts['warn_cont'] + '","'+strftime("%Y-%m-%d %H:%M:%S",localtime(time()))+'",'+str(conts['warn_level'])+')'
+                        sql = 'insert int warn_cont(warn_id,warn_cont,warn_date,warn_level) values(' + msg['channel'].decode('utf-8') + ',"' + conts['warn_cont'] + '","'+strftime("%Y-%m-%d %H:%M:%S",localtime(time()))+'",'+str(conts['warn_level'])+')'
                         result=self.writesql(sql)
-                        #print(result)
+                        print(result)
                         #报警内容写入数据库，如果失败则写入日志文件
                         if result!=True:
                             self.writelog(result)
@@ -76,9 +75,7 @@ class Recieve(object):
                         sendaddrs=loads(msg['data'].decode('utf-8'))
                         if len(sendaddrs)>1:
                             sendaddrs=sendaddrs[1].split(',')
-                            print(sendaddrs)
                             result=self.send_mail(content=conts.get('warn_cont'),title=conts.get('warn_title'),toaddrs=sendaddrs)
-                            print(result)
                             if result!=True:
                                 self.writelog(result)
                     result=True

@@ -26,8 +26,7 @@ class Recieve(object):
                 conts = loads(jsonstr)
                 # print(conts)
                 if conts['warn_true'] == 'true':
-                    sql = 'insert into warn_cont(warn_id,warn_cont,warn_date) values(' + msg[
-                        'channel'].decode('utf-8') + ',"' + conts['warn_cont'] + '","'+strftime("%Y-%m-%d %H:%M:%S",localtime(time()))+'")'
+                    sql = 'insert into warn_cont(warn_id,warn_cont,warn_date,warn_level) values(' + msg['channel'].decode('utf-8') + ',"' + conts['warn_cont'] + '","'+strftime("%Y-%m-%d %H:%M:%S",localtime(time()))+'",'+conts['warn_level']+')'
                     print(sql)
                 '''
                 mydb=connect(host='127.0.0.1',user='root',password='123123',db='winnerlook',port=3306,charset='utf8')
