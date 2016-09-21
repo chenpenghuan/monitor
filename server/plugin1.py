@@ -40,13 +40,15 @@ class Recieve(object):
         try:
             name,add=parseaddr(nameadd)
             msg = MIMEText(content, 'plain', 'utf-8')
-            msg['From'] = formataddr((Header(fromuser,'utf-8').encode(),'13919636933@139.com'))
+            #msg['From'] = formataddr((Header(fromuser,'utf-8').encode(),'13919636933@139.com'))
+            msg['From'] = formataddr((Header(fromuser,'utf-8').encode(),add))
             #msg['To'] = formataddr((Header(touser,'utf-8').encode(),str(toaddrs)))
             msg['Subject']=Header(title,'utf-8').encode()
             server = smtplib.SMTP('smtp.139.com', 25) # SMTP协议默认端口是25
             server.set_debuglevel(0)
-            server.login('13919636933@139.com','573chenpenghuan')
-            server.sendmail('13919636933@139.com', toaddrs, msg.as_string())
+            #server.login('13919636933@139.com','573chenpenghuan')
+            server.login(add,'575chenpenghuan')
+            server.sendmail(add, toaddrs, msg.as_string())
             server.quit()
             result=True
         except Exception as err:
