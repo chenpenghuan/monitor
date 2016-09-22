@@ -153,9 +153,11 @@ class IndexController extends Controller {
 				}
 				$table = M();
 				$sql = 'delete from ' . $tbname . ' where id=' . $_POST['item_id'];
-				$affect = $table->execute($sql);
+				$affect1 = $table->execute($sql);
+				$sql = 'delete from cont_conf where item_id=' . $_POST['item_id'];
+				$affect2 = $table->execute($sql);
 				file_put_contents(C('STATUSFILE'),json_encode(array('status'=>1)));
-				if ($affect) {
+				if ($affect1 && $affect2) {
 					$_POST['act'] = 'list';
 					$this->index($display = 0);
 					echo $this->itemlist($confs,$items1,$items2);
@@ -164,7 +166,7 @@ class IndexController extends Controller {
 					$_POST['act'] = 'list';
 					$this->index($display = 0);
 					$this->foritems2();
-					echo '该菜单不存在，请<button type="button" class="btn btn-success" onclick="location.reload()">刷新</button>重试!';
+					echo '删除出错，请<button type="button" class="btn btn-success" onclick="location.reload()">刷新</button>重试!';
 				}
 				exit();
 			case 'saveadd':
