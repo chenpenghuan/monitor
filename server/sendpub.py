@@ -27,27 +27,20 @@ class formatdata(object):
         logfile.write(strftime("%Y-%m-%d %H:%M:%S",localtime(time()))+"\t"+str(content)+"\r\n")
         logfile.close()
     def main(self):
-        sub = self.conn.pubsub()
-        sub.subscribe(self.subcha)
-        for msg in sub.listen():
-            if msg['type'] == 'message':    #这里开始插件各自的自定义操作
-                try:
-                    jsonstr = request.urlopen(self.url).read().decode('utf-8')
-                    conts = loads(jsonstr)      #这里做数据处理，将爬取到的数据转换成处理报警的服务能够解读的数据
-                    #print(conts)
-                    conts['id']=msg['channel'].decode('utf-8')
-                    sendaddrs=loads(msg['data'].decode('utf-8'))[1]
-                    conts['sendaddrs']=sendaddrs
-                    conts['script']=argv[0]
-                    contstr=dumps(conts,ensure_ascii=False)
-                    self.conn.publish('dowarn',contstr)
-                    result=True
-                except Exception as err:
-                    result=err
-                    #print(result)
-                finally:
-                    if result!=True:
-                        self.writelog(argv[0]+"\t"+str(result))
+        try:
+            conts={'warn_level': 1, 'sendaddrs': 'cphchenpenghuan@gmail.com,kellychen@winnerlook.com,1034478083@qq.com', 'warn_cont': '通道319出现拥堵，已有9999条数据等待处理', 'script': 'testplugin.py', 'warn_title': '通道拥堵', 'id': '1'}
+            print(conts)
+            contstr=dumps(conts,ensure_ascii=False)
+            self.conn.publish('dowarn',contstr)
+            result=True
+        except Exception as err:
+            result=err
+            print(result)
+        finally:
+            if result!=True:
+                self.writelog(argv[0]+"\t"+str(result))
+            else:
+                print(conts)
 
 if __name__ == "__main__":
     subcha = ['1']   #监听频道

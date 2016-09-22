@@ -43,7 +43,7 @@ class Recieve(object):
         logfile.close()
     def writesql(self,sql):
         try:
-            mydb=connect(host='127.0.0.1',user='root',password='123123',db='winnerlook',port=3306,charset='utf8')
+            mydb=connect(host='192.168.1.193',user='root',password='123123',db='winnerlook',port=3306,charset='utf8')
             cur=mydb.cursor()
             cur.execute(sql)
             mydb.commit()
@@ -109,5 +109,5 @@ class Recieve(object):
 
 if __name__ == "__main__":
     subcha = ['dowarn']
-    obj = Recieve('127.0.0.1', 6379, '123123', subcha,'http://localhost/warn_test.php','/home/cph/jsons/logfile.log')
+    obj = Recieve('192.168.1.193', 6379, '123123', subcha,'http://localhost/warn_test.php','/home/cph/jsons/logfile.log')
     obj.main()
