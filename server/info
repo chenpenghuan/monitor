@@ -1,0 +1,10 @@
+配置：
+    报警ID 报警类型 级别 标题 内容 参数名 参数阀值 判断逻辑（包含、大于、小于、无条件）
+			type	level			key		value	logic
+必须参数:
+    报警ID 标题 内容 参数
+    id	title	content	 params
+    
+    
+    
+    id value title cont date
