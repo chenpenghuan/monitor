@@ -38,7 +38,7 @@ class Monitor(object):
         finally:
             return result
 
-    def insert(self, sql):
+    def insert(self, sql):      #sql为list类型
         result = {}
         try:
             conn = connect(
@@ -49,14 +49,19 @@ class Monitor(object):
                 port=3306,
                 charset='utf8')
             cur = conn.cursor()
-            cur.execute(sql)
+            for i in sql:
+                print(i)
+                #cur.execute(i)
             result[0] = True
             result[1] = None
         except Exception as err:
             result[0] = False
             result[1] = str(err)
         finally:
-            conn.commit()
+            if result[0]==True:
+                conn.commit()
+            else:
+                conn.rollback()
             cur.close()
             conn.close()
             return result
@@ -126,29 +131,48 @@ class Monitor(object):
         confsfile = open(self.confsfile)
         self.confs = loads(confsfile.read())
         confsfile.close()
-        for m in self.confs:
-            for n in self.confs[m]:
-                try:
-                    urlcont = urlopen(
-                        self.confs[m][n]['cont_url']).read().decode('utf-8')
-                    # print(urlcont)
+        for m in self.confs:        #m为cont_conf中的item_id
+            sql=[]
+            print('菜单id'+str(m))
+            sql.append('update contents set isshow=0 where cont_id in (select id from cont_conf where item_id=' + str(m) + ')')
+            '''
+            it = self.insert(sql)
+            if it[0] == False:
+                self.traceproc('数据库写入错误'+"\t"+str(it[1]))
+                exit()
+            '''
+            try:
+                for n in self.confs[m]:         #n为cont_conf中的id
+                    #print('字段id'+str(n))
+                    urlcont = urlopen(self.confs[m][n]['cont_url']).read().decode('utf-8')
                     data = loads(urlcont)
-                    sql = 'update contents set isshow=0 where cont_id=' + \
-                        str(n)
-                    it = self.insert(sql)
-                    if it[0] == False:
-                        self.traceproc('数据库写入错误'+"\t"+str(it[1]))
-                    upsec = 1  # 控制行，字典中有多少元素，就显示刷多少行
-                    for i in data:
-                        if i.get(self.confs[m][n]['cont_var']):
-                            sql = 'insert into contents(cont_id,cont_text,update_sec,update_date) values(' + str(n) + ',"' + i.get(
-                                self.confs[m][n]['cont_var']) + '",' + str(upsec) + ',"' + strftime("%Y-%m-%d %H:%M:%S", localtime(time())) + '")'
-                            # print(sql)
-                            print(self.insert(sql))
-                            upsec = upsec + 1
-                except Exception as err:
-                    self.traceproc(
-                        'URL解析错误'+"\t"+str(self.confs[m][n]['cont_url'])+':'+str(err))
+                    #print(data)
+                    if type(data)==list:
+                        data=data[0]
+                        #print(data)
+                    print(data.get('key'))
+                    if type(data)==dict:
+                        key=data.get('key')
+                        if key is not None:
+                            data.pop('key')
+                            upsec=1       #控制行
+                            for i in data:
+                                #print(n)
+                                #print(i)   #i为web界面上的表的键
+                                print(data[i])
+                                #print(self.confs[m][n])
+                                #print(data[key])
+                                #print(self.confs[m][n]['cont_url'])
+                                if self.confs[m][n]['cont_var']!=key:
+                                    sql.append('insert into contents(cont_id,cont_text,update_sec,update_date) values('+str(n)+',"'+str(data[i].get(self.confs[m][n]['cont_var']))+'",'+str(upsec)+',"'+strftime("%Y-%m-%d %H:%M:%S", localtime(time()))+'")')
+                                else:
+                                    sql.append('insert into contents(cont_id,cont_text,update_sec,update_date) values('+str(n)+',"'+str(i)+'",'+str(upsec)+',"'+strftime("%Y-%m-%d %H:%M:%S", localtime(time()))+'")')
+                                upsec=upsec+1
+            except Exception as err:
+                self.traceproc('URL解析错误'+"\t"+str(self.confs[m][n]['cont_url'])+':'+str(err))
+            it=self.insert(sql)
+            if it[0] == False:
+                self.traceproc('数据库写入错误'+"\t"+str(it[1]))
         print('此次刷新已完成')
 # 变动位置
 if __name__ == "__main__":
@@ -159,7 +183,7 @@ if __name__ == "__main__":
             statusfile='/home/cph/jsons/conf_status.json',
             logfile='/home/cph/jsons/logfile.log')
         obj.handle()
-        sleep(300)
+        sleep(60)
         if flag > 80:
             flag = flag - 1
         else:

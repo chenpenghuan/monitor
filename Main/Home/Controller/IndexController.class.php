@@ -5,9 +5,9 @@ use Think\Controller;
 class IndexController extends Controller {
 	public function index($display = 1) {
 		//提前加载报警模块的数据
-		$wf = M()->query('select id,warn_type,warn_prog,warn_conf,warn_send from warn_conf');
+		$wf = M()->query('select id,warn_type,warn_level,warn_key,warn_value,warn_logic,warn_send from warn_conf');
 		F('warn_conf', $wf);
-		$wc = M()->query('select warn_cont.id,warn_cont.warn_date,warn_cont.warn_level,warn_conf.warn_type,warn_cont.warn_cont from warn_cont left join warn_conf on warn_conf.id=warn_cont.warn_id order by warn_cont.id desc');
+		$wc = M()->query('select warn_cont.id,warn_cont.warn_date,warn_conf.warn_level,warn_conf.warn_type,warn_cont.warn_cont from warn_cont left join warn_conf on warn_conf.id=warn_cont.warn_id order by warn_cont.id desc');
 		F('warn_cont',$wc);
 		$this->chkstatus();
 		$this->readjson();
@@ -101,14 +101,15 @@ class IndexController extends Controller {
 	}
 	public function itemlist($confs,$items1,$items2){
 			$tbhead = '<div id="delmsg"><table  class="table table-bordered table-hover definewidth m10" style="font-size:12px;"><thead><tr><th style="width:7.5%">一级菜单/序号</th><th style="width:7.5%">二级菜单/序号</th><th style="text-align:center">数据来源</th><!--<th style="width:3.2%">状态</th>--><th  style="width:7%">管理/<button onclick=foritems2("item2id=6&act=add") type="button" class="btn btn-xs">新建</button></th></tr></thead>';
-			foreach ($items1 as $key => $value) {
+			foreach ($items1 as $key => $value) {//有二级菜单
 				if ($items2[$key]) {
 					$itm_c = count($items2[$key]['title']);
 					$tds = '';
 					for ($i = 0; $i < $itm_c; $i++) {
 						$btn1 = '';
 						$datafrom = '';
-						if ($items2[$key]['chan'][$i] != '1') {
+						if ($items2[$key]['chan'][$i] != '1') {//该菜单可以修改
+							#$btn1=$items2[$key]['id'][$i];
 							$btn1 = '<button type="button" class="btn btn-default" onclick=foritems2(all="item2id=6&act=edititem&item_type=2&item_num=' . $items2[$key]['num'][$i] . '&item_title=' . $items2[$key]['title'][$i] . '&item_belo=' . $value['id'] . '&item_id=' . $items2[$key]['id'][$i] . '",url="foritems2")>修改</button><button onclick=foritems2(all="item2id=6&act=delitem&item_type=2&item_id=' . $items2[$key]['id'][$i] . '",url="foritems2",outid="delmsg",warn="Y",warnword="确定删除吗？") type="button" class="btn btn-default">删除</button>';
 							//$btn1=$items2[$key]['chan'][$i];
 						}
@@ -153,9 +154,11 @@ class IndexController extends Controller {
 				}
 				$table = M();
 				$sql = 'delete from ' . $tbname . ' where id=' . $_POST['item_id'];
-				$affect = $table->execute($sql);
+				$affect1 = $table->execute($sql);
+				$sql = 'delete from cont_conf where item_id=' . $_POST['item_id'];
+				$affect2 = $table->execute($sql);
 				file_put_contents(C('STATUSFILE'),json_encode(array('status'=>1)));
-				if ($affect) {
+				if ($affect1 && $affect2) {
 					$_POST['act'] = 'list';
 					$this->index($display = 0);
 					echo $this->itemlist($confs,$items1,$items2);
@@ -164,7 +167,7 @@ class IndexController extends Controller {
 					$_POST['act'] = 'list';
 					$this->index($display = 0);
 					$this->foritems2();
-					echo '该菜单不存在，请<button type="button" class="btn btn-success" onclick="location.reload()">刷新</button>重试!';
+					echo '删除出错，请<button type="button" class="btn btn-success" onclick="location.reload()">刷新</button>重试!';
 				}
 				exit();
 			case 'saveadd':
