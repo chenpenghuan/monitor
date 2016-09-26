@@ -25,13 +25,13 @@ class WarnCheck(object):
             charset='utf8',
             port=3306)
         cur = conn.cursor()
-        count = cur.execute('select id,warn_type,warn_send from warn_conf')
+        count = cur.execute('select id,warn_type,warn_level,warn_key,warn_value,warn_send,warn_logic from warn_conf')
         result = cur.fetchall()
         cur.close()
         conn.close()
         dic={}
         for i in result:
-            dic[i[0]]=(i[1],i[2])
+            dic[i[0]]=(i[1],i[2],i[3],i[4],i[5],i[6])
         file=open(self.configfile,'w',encoding='utf-8')
         file.write(dumps(dic))
         file.close()

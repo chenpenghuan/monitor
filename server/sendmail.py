@@ -2,6 +2,7 @@ from email.header import Header
 from email.mime.text import MIMEText
 from email.utils import parseaddr, formataddr
 import smtplib
+from time import sleep
 
 def _format_addr(s):
     name, addr = parseaddr(s)
@@ -17,6 +18,8 @@ def send_mail(from_addr='13919636933@139.com',password='575chenpenghuan',to_addr
     server.sendmail(from_addr, to_addr.split(','), msg.as_string())
     server.quit()
 if __name__=="__main__":
-    send_mail()
+    for i in range(5):
+        sleep(30)
+        send_mail()
 
 

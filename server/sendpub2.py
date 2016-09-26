@@ -11,6 +11,7 @@ from urllib import request
 from json import loads, dumps
 from time import time,localtime,strftime
 from sys import argv
+from time import sleep
 
 class formatdata(object):
 
@@ -29,7 +30,7 @@ class formatdata(object):
     def main(self,conts):
         try:
             contstr=dumps(conts,ensure_ascii=False)
-            self.conn.publish('dowarn',contstr)
+            self.conn.publish('dowarn2',contstr)
             result=True
         except Exception as err:
             result=err
@@ -38,15 +39,19 @@ class formatdata(object):
                 self.writelog(argv[0]+"\t"+str(result))
 
 if __name__ == "__main__":
-    subcha = ['1']   #监听频道
-    obj = formatdata('192.168.1.193', 6379, '123123', subcha,'http://localhost/warn_test.php','/home/cph/jsons/plugin1.log')
-    #obj = formatdata('127.0.0.1', 6379, '123123', subcha,'http://localhost/wrn_test.php','/home/cph/jsons/plugin1.log')
-    conts={
-        'warn_level': 1,
-        'sendaddrs': 'cphchenpenghuan@gmail.com,kellychen@winnerlook.com,1034478083@qq.com',
-        'warn_cont': '通道319出现拥堵，已有9999条数据等待处理',
-        'script': 'testplugin.py',
-        'warn_title': '通道拥堵',
-        'id': '1'
-        }
-    obj.main(conts)
+    i=0
+    while i<100:
+        sleep(5)
+        subcha = ['1']   #监听频道
+        obj = formatdata('192.168.1.193', 6379, '123123', subcha,'http://localhost/warn_test.php','/home/cph/jsons/plugin1.log')
+        #obj = formatdata('127.0.0.1', 6379, '123123', subcha,'http://localhost/wrn_test.php','/home/cph/jsons/plugin1.log')
+        conts={
+            'id': 3,
+            'params':'我是一只小小鸟',
+            'title':'报警信息标题',
+            'content':'报警信息内容'
+            }
+        #obj.main(conts)
+        if i>80:
+            i=0
+        print(dumps(conts))
