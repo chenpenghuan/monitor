@@ -7,8 +7,10 @@ class IndexController extends Controller {
 		//提前加载报警模块的数据
 		$wf = M()->query('select id,warn_type,warn_level,warn_key,warn_value,warn_logic,warn_send from warn_conf');
 		F('warn_conf', $wf);
+		$wcs = M()->query('select id,warn_colid,warn_type,warn_level,warn_key,warn_value,warn_logic,warn_send from warn_cols_conf');
+		F('warn_cols_conf', $wcs);
 		$wc = M()->query('select warn_cont.id,warn_cont.warn_date,warn_conf.warn_level,warn_conf.warn_type,warn_cont.warn_cont from warn_cont left join warn_conf on warn_conf.id=warn_cont.warn_id order by warn_cont.id desc');
-		F('warn_cont',$wc);
+		F('warn_cont', $wc);
 		$this->chkstatus();
 		$this->readjson();
 		$item_conf = M();
@@ -99,41 +101,43 @@ class IndexController extends Controller {
 		$_SESSION['username'] = null;
 		header('Location:login');
 	}
-	public function itemlist($confs,$items1,$items2){
-			$tbhead = '<div id="delmsg"><table  class="table table-bordered table-hover definewidth m10" style="font-size:12px;"><thead><tr><th style="width:7.5%">一级菜单/序号</th><th style="width:7.5%">二级菜单/序号</th><th style="text-align:center">数据来源</th><!--<th style="width:3.2%">状态</th>--><th  style="width:7%">管理/<button onclick=foritems2("item2id=6&act=add") type="button" class="btn btn-xs">新建</button></th></tr></thead>';
-			foreach ($items1 as $key => $value) {//有二级菜单
-				if ($items2[$key]) {
-					$itm_c = count($items2[$key]['title']);
-					$tds = '';
-					for ($i = 0; $i < $itm_c; $i++) {
-						$btn1 = '';
-						$datafrom = '';
-						if ($items2[$key]['chan'][$i] != '1') {//该菜单可以修改
-							#$btn1=$items2[$key]['id'][$i];
-							$btn1 = '<button type="button" class="btn btn-default" onclick=foritems2(all="item2id=6&act=edititem&item_type=2&item_num=' . $items2[$key]['num'][$i] . '&item_title=' . $items2[$key]['title'][$i] . '&item_belo=' . $value['id'] . '&item_id=' . $items2[$key]['id'][$i] . '",url="foritems2")>修改</button><button onclick=foritems2(all="item2id=6&act=delitem&item_type=2&item_id=' . $items2[$key]['id'][$i] . '",url="foritems2",outid="delmsg",warn="Y",warnword="确定删除吗？") type="button" class="btn btn-default">删除</button>';
-							//$btn1=$items2[$key]['chan'][$i];
-						}
-						if ($confs[$items2[$key]['id'][$i]]) {
-							$datafrom = stripslashes(json_encode($confs[$items2[$key]['id'][$i]], JSON_UNESCAPED_UNICODE));
-						}
-						$tds .= '<tr><td>' . $items2[$key]['title'][$i] . '/' . $items2[$key]['num'][$i] . '</td><td style="font-size:10px;width:60%;word-wrap: break-word;word-break:break-all;">' . $datafrom . '</td><!--<td>状态</td>--><td><div class="btn-group btn-group-xs">' . $btn1 . '</div></td></tr>';
+	public function itemlist($confs, $items1, $items2) {
+		$tbhead = '<div id="delmsg"><table  class="table table-bordered table-hover definewidth m10" style="font-size:12px;"><thead><tr><th style="width:7.5%">一级菜单/序号</th><th style="width:7.5%">二级菜单/序号</th><th style="text-align:center">数据来源</th><!--<th style="width:3.2%">状态</th>--><th  style="width:7%">管理/<button onclick=foritems2("item2id=6&act=add") type="button" class="btn btn-xs">新建</button></th></tr></thead>';
+		foreach ($items1 as $key => $value) {
+//有二级菜单
+			if ($items2[$key]) {
+				$itm_c = count($items2[$key]['title']);
+				$tds = '';
+				for ($i = 0; $i < $itm_c; $i++) {
+					$btn1 = '';
+					$datafrom = '';
+					if ($items2[$key]['chan'][$i] != '1') {
+//该菜单可以修改
+						#$btn1=$items2[$key]['id'][$i];
+						$btn1 = '<button type="button" class="btn btn-default" onclick=foritems2(all="item2id=6&act=edititem&item_type=2&item_num=' . $items2[$key]['num'][$i] . '&item_title=' . $items2[$key]['title'][$i] . '&item_belo=' . $value['id'] . '&item_id=' . $items2[$key]['id'][$i] . '",url="foritems2")>修改</button><button onclick=foritems2(all="item2id=6&act=delitem&item_type=2&item_id=' . $items2[$key]['id'][$i] . '",url="foritems2",outid="delmsg",warn="Y",warnword="确定删除吗？") type="button" class="btn btn-default">删除</button>';
+						//$btn1=$items2[$key]['chan'][$i];
 					}
-					$tbbody .= '<tr><td rowspan="' . ($itm_c + 1) . '">' . $value['title'] . '/' . $value['id'] . '</td></tr>' . $tds;
-				} else {
-					if ($value['chan'] != '1') {
-						$btn2 = '<button onclick=foritems2(all="item2id=6&act=edititem&item_title=' . $value['title'] . '&item_type=1&item_num=' . $value['num'] . '&item_id=' . $value['id'] . '") type="button" class="btn btn-default">修改</button><button onclick=foritems2(all="item2id=6&act=delitem&item_type=1&item_id=' . $value['id'] . '",url="foritems2",outid="delmsg",warn="Y",warnword="确定删除吗？") type="button" class="btn btn-default">删除</button>';
+					if ($confs[$items2[$key]['id'][$i]]) {
+						$datafrom = stripslashes(json_encode($confs[$items2[$key]['id'][$i]], JSON_UNESCAPED_UNICODE));
 					}
-					if ($confs[$value['id']]) {
-						$datafrom = stripslashes(json_encode($confs[$value['id']]));
-					}else{
-						//修复栏目列表中json串出现复用的问题
-						$datafrom='';
-					}
-					$tbbody .= '<tr><td>' . $value['title'] . '/' . $value['num'] . '</td><td></td><td>' . $datafrom . '</td><!--<td>状态</td>--><td><div class="btn-group btn-group-xs">' . $btn2 . '</div></td></tr>';
+					$tds .= '<tr><td>' . $items2[$key]['title'][$i] . '/' . $items2[$key]['num'][$i] . '</td><td style="font-size:10px;width:60%;word-wrap: break-word;word-break:break-all;">' . $datafrom . '</td><!--<td>状态</td>--><td><div class="btn-group btn-group-xs">' . $btn1 . '</div></td></tr>';
 				}
+				$tbbody .= '<tr><td rowspan="' . ($itm_c + 1) . '">' . $value['title'] . '/' . $value['id'] . '</td></tr>' . $tds;
+			} else {
+				if ($value['chan'] != '1') {
+					$btn2 = '<button onclick=foritems2(all="item2id=6&act=edititem&item_title=' . $value['title'] . '&item_type=1&item_num=' . $value['num'] . '&item_id=' . $value['id'] . '") type="button" class="btn btn-default">修改</button><button onclick=foritems2(all="item2id=6&act=delitem&item_type=1&item_id=' . $value['id'] . '",url="foritems2",outid="delmsg",warn="Y",warnword="确定删除吗？") type="button" class="btn btn-default">删除</button>';
+				}
+				if ($confs[$value['id']]) {
+					$datafrom = stripslashes(json_encode($confs[$value['id']]));
+				} else {
+					//修复栏目列表中json串出现复用的问题
+					$datafrom = '';
+				}
+				$tbbody .= '<tr><td>' . $value['title'] . '/' . $value['num'] . '</td><td></td><td>' . $datafrom . '</td><!--<td>状态</td>--><td><div class="btn-group btn-group-xs">' . $btn2 . '</div></td></tr>';
 			}
-			$tbfoot = '</table></div>';
-			return $tbhead . $tbbody . $tbfoot;
+		}
+		$tbfoot = '</table></div>';
+		return $tbhead . $tbbody . $tbfoot;
 	}
 	public function foritems2() {
 		$this->chkstatus();
@@ -144,7 +148,7 @@ class IndexController extends Controller {
 		if (in_array($_POST['item2id'], $items2[5]['id'])) {
 			switch ($_POST['act']) {
 			case 'list':
-				echo $this->itemlist($confs,$items1,$items2);
+				echo $this->itemlist($confs, $items1, $items2);
 				exit();
 			case 'delitem':
 				if ($_POST['item_type'] == '2') {
@@ -157,11 +161,11 @@ class IndexController extends Controller {
 				$affect1 = $table->execute($sql);
 				$sql = 'delete from cont_conf where item_id=' . $_POST['item_id'];
 				$affect2 = $table->execute($sql);
-				file_put_contents(C('STATUSFILE'),json_encode(array('status'=>1)));
+				file_put_contents(C('STATUSFILE'), json_encode(array('status' => 1)));
 				if ($affect1 && $affect2) {
 					$_POST['act'] = 'list';
 					$this->index($display = 0);
-					echo $this->itemlist($confs,$items1,$items2);
+					echo $this->itemlist($confs, $items1, $items2);
 					echo '删除成功！左侧栏目<button type="button" class="btn btn-success" onclick="location.reload()">刷新</button>即可更改';
 				} else {
 					$_POST['act'] = 'list';
@@ -177,7 +181,7 @@ class IndexController extends Controller {
 							$table = M();
 							$sql = 'insert into item2_conf(item1_num,item2_num,item2_title) values(' . $_POST['itm_belo'] . ',' . $_POST['itm_id'] . ',"' . $_POST['itm_name'] . '")';
 							$table->execute($sql);
-							file_put_contents(C('STATUSFILE'),json_encode(array('status'=>1)));
+							file_put_contents(C('STATUSFILE'), json_encode(array('status' => 1)));
 							echo '添加成功，<button type="button" class="btn btn-success" onclick="location.reload()">刷新</button>即可显示';
 						} catch (Exception $e) {
 							echo $e->getMessage();
@@ -204,7 +208,7 @@ class IndexController extends Controller {
 							$table = M();
 							$sql = 'insert into item1_conf(item1_num,item1_title) values(' . $_POST['itm_id'] . ',"' . $_POST['itm_name'] . '")';
 							$table->execute($sql);
-							file_put_contents(C('STATUSFILE'),json_encode(array('status'=>1)));
+							file_put_contents(C('STATUSFILE'), json_encode(array('status' => 1)));
 							echo '添加成功，<button type="button" class="btn btn-success" onclick="location.reload()">刷新</button>即可显示';
 						} catch (Exception $e) {
 							echo $e->getMessage();
@@ -364,7 +368,7 @@ class IndexController extends Controller {
 						$sql = 'update item' . $_POST['itm_type'] . '_conf set item' . $_POST['itm_type'] . '_title="' . $_POST['itm_name'] . '",item1_num=' . $_POST['itm_belo'] . ' where id=' . $_POST['itm_id'];
 					}
 					if ($tb->execute($sql)) {
-						file_put_contents(C('STATUSFILE'),json_encode(array('status'=>1)));
+						file_put_contents(C('STATUSFILE'), json_encode(array('status' => 1)));
 						$msg = '修改栏目信息成功<br>';
 					} else {
 						$msg = '栏目信息没有任何修改<br>';
@@ -399,7 +403,7 @@ class IndexController extends Controller {
 					}
 					if ($tb->execute($sql1) && $tb->execute($sql2) && $tb->execute($sql3)) {
 						$tb->commit();
-						file_put_contents(C('STATUSFILE'),json_encode(array('status'=>1)));
+						file_put_contents(C('STATUSFILE'), json_encode(array('status' => 1)));
 						$msg = '修改栏目信息成功<br>';
 					} else {
 						$tb->rollback();
@@ -421,7 +425,7 @@ class IndexController extends Controller {
 						}
 						if ($tb->execute($sql)) {
 							$result = 1;
-							file_put_contents(C('STATUSFILE'),json_encode(array('status'=>1)));
+							file_put_contents(C('STATUSFILE'), json_encode(array('status' => 1)));
 						}
 					}
 				} else {
@@ -480,14 +484,12 @@ class IndexController extends Controller {
 			$where = substr($where, 0, -1);
 			$data = M()->query('select cont_id,cont_text,update_sec,update_date from contents where isshow=1 and cont_id in (' . $where . ')  order by update_sec desc');
 			$data_c = count($data);
-			//var_dump($data);
 			for ($i = 0; $i < $data_c; $i++) {
 				$data2[$data[$i]['update_sec']][$data[$i]['cont_id']] = $data[$i]['cont_text'];
 				$data2[$data[$i]['update_sec']]['date'] = $data[$i]['update_date'];
 			}
 			$data2_c = count($data2);
 			for ($m = 1; $m < $data2_c + 1; $m++) {
-				//var_dump($data2[$m]);
 				for ($n = 1; $n < $max_id + 1; $n++) {
 					if ($data2[$m][$n] == null) {
 						$data2[$m][$n] = '  ';
@@ -497,7 +499,6 @@ class IndexController extends Controller {
 			$trs = '';
 			foreach ($data2 as $k => $v) {
 				if ($_POST['selected'] and $_POST['search'] != '') {
-					//var_dump($v[$_POST['selected']]);
 					if (!stristr($v[$_POST['selected']], $_POST['search'])) {
 						continue;
 					}
