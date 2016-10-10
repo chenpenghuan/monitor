@@ -44,7 +44,7 @@ class formatdata(object):
     def main(self, conts):
         try:
             contstr = dumps(conts, ensure_ascii=False)
-            self.conn.publish('dowarn2', contstr)
+            self.conn.publish('warn_center', contstr)
             result = True
         except Exception as err:
             result = err
@@ -60,7 +60,7 @@ if __name__ == "__main__":
                      '/home/cph/jsons/plugin1.log')
     conts = {
         'id': 4,
-        'params':'ok',
+        'params':'OK',
         'title': '报警信息标题',
         'content': '报警信息内容'
     }

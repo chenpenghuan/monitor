@@ -109,6 +109,7 @@ class Recieve(object):
                     configs=self.readconf()
                     if configs.get(str(conts['id'])):
                         configs=configs.get(str(conts['id']))
+                    print(configs)
                     act=0   #只存储信息，不做报警处理
                     if int(configs[4])==4:      #如果逻辑条件是无条件报警
                         act=1
@@ -125,16 +126,16 @@ class Recieve(object):
                                 act=1
                     # print(str(configs[3]))       #报警设置中的阀值
                     print('act:'+str(act))
-                    if act==1:      #需要报警
+                    if act==1:      # 需要报警
                         if len(configs[5]) > 1:
                             result = self.send_mail(from_user='云集监控', to_user='云集管理员', content=conts.get('content'),title=conts.get('title'),to_addr=configs[5])  # 发送报警邮件，如果失败则写入日志文件
-                            print(result)
+                            print("报警信息发送成功")
                             if result != True:
                                 self.writelog(conts['script'] + result)
-                    sql='insert into warn_cont(warn_id,warn_value,warn_title,warn_cont,warn_date) values(' + str(conts['id'])+',\''+str(conts.get(str(configs[2])))+'\',\''+str(conts.get('title'))+'\',\''+str(conts.get('content'))+'\',\''+strftime("%Y-%m-%d %H:%M:%S",localtime(time()))+'\')'
+                    sql='insert into warn_cont(warn_send,warn_id,warn_value,warn_title,warn_cont,warn_date) values(' +str(act)+','+str(conts['id'])+',\''+str(conts.get(str(configs[2])))+'\',\''+str(conts.get('title'))+'\',\''+str(conts.get('content'))+'\',\''+strftime("%Y-%m-%d %H:%M:%S",localtime(time()))+'\')'
                     print(sql)
                     result = self.writesql(sql)
-                    print(result)
+                    print("报警记录写入成功")
                     if result != True:
                         self.writelog(result)
                     result=True
@@ -148,6 +149,6 @@ class Recieve(object):
                             self.writelog('未知id'+"\t"+str(result))
 
 if __name__ == "__main__":
-    subcha = ['dowarn2']
+    subcha = ['warn_center']
     obj = Recieve('192.168.1.154', 6379, '123123', subcha,'/home/cph/jsons/warn_config.json','/home/cph/jsons/logfile.log')
     obj.main()

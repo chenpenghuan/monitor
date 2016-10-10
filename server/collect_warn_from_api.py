@@ -33,7 +33,7 @@ class formatdata(object):
             if msg['type'] == 'message':    #这里开始插件各自的自定义操作
                 try:
                     jsonstr = request.urlopen(self.url).read().decode('utf-8')
-                    conts = loads(jsonstr)      #这里做数据处理，将爬取到的数据转换成处理报警的服务能够解读的数据
+                    conts = loads(jsonstr)      #这里做数据处理，将爬取到的数据转换成处理报警中心能够解读的数据
                     #print(conts)
                     conts['id']=msg['channel'].decode('utf-8')
                     sendaddrs=loads(msg['data'].decode('utf-8'))[1]
@@ -51,6 +51,6 @@ class formatdata(object):
 
 if __name__ == "__main__":
     subcha = ['1']   #监听频道
-    obj = formatdata('192.168.1.193', 6379, '123123', subcha,'http://localhost/warn_test.php','/home/cph/jsons/plugin1.log')
+    obj = formatdata('192.168.1.154', 6379, '123123', subcha,'http://localhost/warn_test.php','/home/cph/jsons/plugin1.log')
     #obj = formatdata('127.0.0.1', 6379, '123123', subcha,'http://localhost/wrn_test.php','/home/cph/jsons/plugin1.log')
     obj.main()

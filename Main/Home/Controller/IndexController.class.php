@@ -7,9 +7,9 @@ class IndexController extends Controller {
 		//提前加载报警模块的数据
 		$wf = M()->query('select id,warn_type,warn_level,warn_key,warn_value,warn_logic,warn_send from warn_conf');
 		F('warn_conf', $wf);
-		$wcs = M()->query('select id,warn_colid,warn_type,warn_level,warn_key,warn_value,warn_logic,warn_send from warn_cols_conf');
+		$wcs = M()->query('select id,warn_colid,warn_type,warn_level,warn_value,warn_logic,warn_send from warn_cols_conf');
 		F('warn_cols_conf', $wcs);
-		$wc = M()->query('select warn_cont.id,warn_cont.warn_date,warn_conf.warn_level,warn_conf.warn_type,warn_cont.warn_cont from warn_cont left join warn_conf on warn_conf.id=warn_cont.warn_id order by warn_cont.id desc');
+		$wc = M()->query('select warn_cont.id,warn_cont.warn_send,warn_cont.warn_date,warn_conf.warn_level,warn_conf.warn_type,warn_cont.warn_cont from warn_cont left join warn_conf on warn_conf.id=warn_cont.warn_id order by warn_cont.id desc');
 		F('warn_cont', $wc);
 		$this->chkstatus();
 		$this->readjson();
@@ -161,7 +161,7 @@ class IndexController extends Controller {
 				$affect1 = $table->execute($sql);
 				$sql = 'delete from cont_conf where item_id=' . $_POST['item_id'];
 				$affect2 = $table->execute($sql);
-				file_put_contents(C('STATUSFILE'), json_encode(array('status' => 1)));
+				file_put_contents(C('DATA_COLL'), '');
 				if ($affect1 && $affect2) {
 					$_POST['act'] = 'list';
 					$this->index($display = 0);
@@ -181,7 +181,7 @@ class IndexController extends Controller {
 							$table = M();
 							$sql = 'insert into item2_conf(item1_num,item2_num,item2_title) values(' . $_POST['itm_belo'] . ',' . $_POST['itm_id'] . ',"' . $_POST['itm_name'] . '")';
 							$table->execute($sql);
-							file_put_contents(C('STATUSFILE'), json_encode(array('status' => 1)));
+							file_put_contents(C('DATA_COLL'), '');
 							echo '添加成功，<button type="button" class="btn btn-success" onclick="location.reload()">刷新</button>即可显示';
 						} catch (Exception $e) {
 							echo $e->getMessage();
@@ -208,7 +208,7 @@ class IndexController extends Controller {
 							$table = M();
 							$sql = 'insert into item1_conf(item1_num,item1_title) values(' . $_POST['itm_id'] . ',"' . $_POST['itm_name'] . '")';
 							$table->execute($sql);
-							file_put_contents(C('STATUSFILE'), json_encode(array('status' => 1)));
+							file_put_contents(C('DATA_COLL'), '');
 							echo '添加成功，<button type="button" class="btn btn-success" onclick="location.reload()">刷新</button>即可显示';
 						} catch (Exception $e) {
 							echo $e->getMessage();
@@ -368,7 +368,7 @@ class IndexController extends Controller {
 						$sql = 'update item' . $_POST['itm_type'] . '_conf set item' . $_POST['itm_type'] . '_title="' . $_POST['itm_name'] . '",item1_num=' . $_POST['itm_belo'] . ' where id=' . $_POST['itm_id'];
 					}
 					if ($tb->execute($sql)) {
-						file_put_contents(C('STATUSFILE'), json_encode(array('status' => 1)));
+						file_put_contents(C('DATA_COLL'), '');
 						$msg = '修改栏目信息成功<br>';
 					} else {
 						$msg = '栏目信息没有任何修改<br>';
@@ -403,7 +403,7 @@ class IndexController extends Controller {
 					}
 					if ($tb->execute($sql1) && $tb->execute($sql2) && $tb->execute($sql3)) {
 						$tb->commit();
-						file_put_contents(C('STATUSFILE'), json_encode(array('status' => 1)));
+						file_put_contents(C('DATA_COLL'), '');
 						$msg = '修改栏目信息成功<br>';
 					} else {
 						$tb->rollback();
@@ -425,7 +425,7 @@ class IndexController extends Controller {
 						}
 						if ($tb->execute($sql)) {
 							$result = 1;
-							file_put_contents(C('STATUSFILE'), json_encode(array('status' => 1)));
+							file_put_contents(C('DATA_COLL'), '');
 						}
 					}
 				} else {
