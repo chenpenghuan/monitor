@@ -54,9 +54,10 @@ class formatdata(object):
     def main(self):
         sub = self.conn.pubsub()
         sub.subscribe(self.subcha)
+        contstrs=[]
         for msg in sub.listen():
             if msg['type'] == 'message':    #这里开始插件各自的自定义操作
-                print('进来了')
+                print('被调用')
                 try:
                     if path.isfile(self.confsfile):
                         confsfile = open(self.confsfile)
@@ -80,20 +81,23 @@ class formatdata(object):
                                         if int(line.get('cont_text'))>int(col.get('warn_value')):
                                             conts = {'id': int(col.get('warn_center_id')),'params':'default','title':str(col.get('warn_type')),'content': '字段”'+str(line.get('cont_title'))+'“（id为'+str(line.get('cont_id'))+'）的值为'+line.get('cont_text')+',超出报警上限'+str(col.get('warn_value'))}
                                             contstr=dumps(conts, ensure_ascii=False)
-                                            self.conn.publish('warn_center',contstr)
+                                            contstrs.append(contstr)
                                 if int(col['warn_logic'])==2:   # 按小于匹配
                                     if line.get('cont_text').isdigit() and col.get('warn_value').isdigit():
                                         if int(line.get('cont_text'))<int(col.get('warn_value')):
                                             conts = {'id': int(col.get('warn_center_id')),'params':'default','title':str(col.get('warn_type')),'content': '字段”'+str(line.get('cont_title'))+'“（id为'+str(line.get('cont_id'))+'）的值为'+line.get('cont_text')+',超出报警下限'+str(col.get('warn_value'))}
                                             contstr=dumps(conts, ensure_ascii=False)
-                                            self.conn.publish('warn_center',contstr)
+                                            contstrs.append(contstr)
                                 if int(col['warn_logic'])==3:   # 按包含匹配
                                     contains=col.get('warn_value').split(',')
                                     for cts in contains:
                                         if cts in line.get('cont_text'):
                                             conts = {'id': int(col.get('warn_center_id')),'params':'default','title':str(col.get('warn_type')),'content': '字段”'+str(line.get('cont_title'))+'“（id为'+str(line.get('cont_id'))+'）的值为'+line.get('cont_text')+',包含报警字符串'+str(col.get('warn_value'))}
                                             contstr=dumps(conts, ensure_ascii=False)
-                                            self.conn.publish('warn_center',contstr)
+                                            contstrs.append(contstr)
+                    contstrs=list(set(contstrs))
+                    for contstr in contstrs:
+                        self.conn.publish('warn_center',contstr)
                     result=True
                 except Exception as err:
                     result=err

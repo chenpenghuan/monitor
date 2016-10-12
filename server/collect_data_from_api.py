@@ -124,6 +124,7 @@ class Monitor(object):
                 return False
         else:
             self.confs = cc.get(1)
+        collected=False
         for m in self.confs:  # m为cont_conf中的item_id
             sql = []
             print('菜单id' + str(m))
@@ -163,12 +164,14 @@ class Monitor(object):
                             if it[0] is False:
                                 self.traceproc('数据库写入错误' + "\t" + str(it[1]))
                             else:
-                                conn = Redis(host='192.168.1.154', port=6379, password='123123')
-                                conn.publish('warn_collect','1')
-                                print('此次刷新已完成')
+                                collected=True
             except Exception as err:
                 self.traceproc(
                     'URL解析错误' + "\t" + str(self.confs[m][n]['cont_url']) + ':' + str(err))
+        if collected is True:
+            conn = Redis(host='192.168.1.154', port=6379, password='123123')
+            conn.publish('warn_collect','1')
+            print('此次刷新已完成')
 
 # 变动位置
 if __name__ == "__main__":
@@ -178,7 +181,7 @@ if __name__ == "__main__":
             confsfile='/home/cph/jsons/data_coll.json',
             logfile='/home/cph/jsons/logfile.log')
         obj.handle()
-        sleep(60)
+        sleep(300)
         if flag > 80:
             flag = flag - 1
         else:
