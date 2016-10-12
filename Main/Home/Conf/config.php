@@ -1,9 +1,6 @@
 <?php
 return array(
 	//'配置项'=>'配置值',
-	//'MODULE_ALLOW_LIST' => array('Home', 'Admin', 'User'),
-	//'DEFAULT_MODULE' => 'Home', // 默认模块
-	//'URL_MODEL' => 2,
 	'URL_INDEX' => '/monitor/index/index',
 	'URL_STATUS' => '/monitor/index/chkstatus',
 	'URL_LOGIN' => '/monitor/index/login',
@@ -18,7 +15,7 @@ return array(
 	'DB_PWD' => '123123',
 	'DB_PORT' => '3306',
 	'DB_PREFIX' => '', //设置表前缀
-    'STATUSFILE'=>'/home/cph/jsons/conf_status.json',//设置状态配置文件路径
-    'WARN_STATUS'=>'/home/cph/jsons/warn_status.json',//设置状态配置文件路径
-    'WARN_CONF'=>'/home/cph/jsons/warn_config.json',//设置状态配置文件路径
+	'DATA_COLL'=>'/home/cph/jsons/data_coll.json',//设置统计数据模块的配置文件路径
+	'WARN_CONF'=>'/home/cph/jsons/warn_config.json',//设置服务报警配置文件路径
+	'WARN_COLS_CONF'=>'/home/cph/jsons/warn_cols_config.json',//设置统计报警配置文件路径
 );
