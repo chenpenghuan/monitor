@@ -49,15 +49,14 @@ class Monitor(object):
                 charset='utf8')
             cur = conn.cursor()
             for i in sql:
-                print(i)
-                # cur.execute(i)
+                cur.execute(i)
             result[0] = True
             result[1] = None
         except Exception as err:
             result[0] = False
             result[1] = str(err)
         finally:
-            if result[0] == True:
+            if result[0] is True:
                 conn.commit()
             else:
                 conn.rollback()
@@ -130,12 +129,6 @@ class Monitor(object):
             print('菜单id' + str(m))
             sql.append(
                 'update contents set isshow=0 where cont_id in (select id from cont_conf where item_id=' + str(m) + ')')
-            '''
-            it = self.insert(sql)
-            if it[0] == False:
-                self.traceproc('数据库写入错误'+"\t"+str(it[1]))
-                exit()
-            '''
             try:
                 for n in self.confs[m]:  # n为cont_conf中的id
                     # print('字段id'+str(n))
@@ -155,7 +148,6 @@ class Monitor(object):
                             for i in data:
                                 # print(n)
                                 # print(i)   #i为web界面上的表的键
-                                print(data[i])
                                 # print(self.confs[m][n])
                                 # print(data[key])
                                 # print(self.confs[m][n]['cont_url'])
@@ -166,16 +158,18 @@ class Monitor(object):
                                     sql.append('insert into contents(cont_id,cont_text,update_sec,update_date) values(' + str(
                                         n) + ',"' + str(i) + '",' + str(upsec) + ',"' + strftime("%Y-%m-%d %H:%M:%S", localtime(time())) + '")')
                                 upsec = upsec + 1
+                            it = self.insert(sql)       # 写入数据到contents表
+            # 调用collect_warn_from_database.py
+                            if it[0] is False:
+                                self.traceproc('数据库写入错误' + "\t" + str(it[1]))
+                            else:
+                                conn = Redis(host='192.168.1.154', port=6379, password='123123')
+                                conn.publish('warn_collect','1')
+                                print('此次刷新已完成')
             except Exception as err:
                 self.traceproc(
                     'URL解析错误' + "\t" + str(self.confs[m][n]['cont_url']) + ':' + str(err))
-            it = self.insert(sql)
-            # 调用collect_warn_from_database.py
-            if it[0] == False:
-                self.traceproc('数据库写入错误' + "\t" + str(it[1]))
-        conn = Redis(host='192.168.1.154', port=6379, password='123123')
-        conn.publish('warn_collect','1')
-        print('此次刷新已完成')
+
 # 变动位置
 if __name__ == "__main__":
     flag = 1

@@ -7,7 +7,7 @@ class IndexController extends Controller {
 		//提前加载报警模块的数据
 		$wf = M()->query('select id,warn_type,warn_level,warn_key,warn_value,warn_logic,warn_send from warn_conf');
 		F('warn_conf', $wf);
-		$wcs = M()->query('select id,warn_colid,warn_type,warn_level,warn_value,warn_logic,warn_send from warn_cols_conf');
+		$wcs = M()->query('select id,warn_colid,warn_type,warn_value,warn_logic,warn_center_id from warn_cols_conf');
 		F('warn_cols_conf', $wcs);
 		$wc = M()->query('select warn_cont.id,warn_cont.warn_send,warn_cont.warn_date,warn_conf.warn_level,warn_conf.warn_type,warn_cont.warn_cont from warn_cont left join warn_conf on warn_conf.id=warn_cont.warn_id order by warn_cont.id desc');
 		F('warn_cont', $wc);
@@ -244,7 +244,7 @@ class IndexController extends Controller {
                             <div class="form-group">
                                 <label for="lastname" class="col-sm-2 control-label">菜单序号</label>
                                 <div class="col-sm-10">
-                                    <input type="number" class="form-control" id="itm_id" placeholder="请输入菜单id">
+                                    <input type="number" class="form-control" id="itm_id" placeholder="请输入菜单序号">
                                 </div>
                             </div>
                             <div id="belong" class="form-group" style="display:none">
@@ -257,7 +257,7 @@ class IndexController extends Controller {
                             <div class="form-group">
                                 <label for="lastname" class="col-sm-2 control-label">数据来源</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="itm_from" placeholder="请输入菜单数据来源">
+                                    <input type="text" class="form-control" id="itm_from" placeholder="请输入菜单字段配置，json格式，也可以在字段新建完成后设置">
                                 </div>
                             </div>
                             <div class="form-group">
