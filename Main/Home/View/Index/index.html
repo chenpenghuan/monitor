@@ -1,276 +1,311 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link href="__PUBLIC__/css/bootstrap.css" rel="stylesheet">
-	<script src="__PUBLIC__/js/html5shiv.min.js"></script>
-	<script src="__PUBLIC__/js/respond.min.js"></script>
-	<script src="__PUBLIC__/js/zDialog.js"></script>
-	<script src="__PUBLIC__/js/zDrag.js"></script>
-	<script src="__PUBLIC__/js/my.js"></script>
-	<!--<script src="__PUBLIC__/laydate/laydate.js"></script>-->
-	<script src="__PUBLIC__/js/jquery-3.1.0.min.js"></script>
-	<script src="__PUBLIC__/js/bootstrap.js"></script>
-	<style>
-		html {
-			-ms-text-size-adjust: 100%;
-			-webkit-text-size-adjust: 100%;
-		}
-		body {
-			font-family: 'Microsoft Yahei', '微软雅黑', '宋体', \5b8b\4f53, Tahoma, Arial, Helvetica, STHeiti;
-			margin: 0;
-		}
-		.main-nav {
-			margin-left: 1px;
-		}
-			.main-nav.nav-tabs.nav-stacked > li {
-			}
-				.main-nav.nav-tabs.nav-stacked > li > a {
-					padding: 10px 8px;
-					font-size: 12px;
-					font-weight: 600;
-					color: #4A515B;
-					background: #E9E9E9;
-					background: -moz-linear-gradient(top, #FAFAFA 0%, #E9E9E9 100%);
-					background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FAFAFA), color-stop(100%,#E9E9E9));
-					background: -webkit-linear-gradient(top, #FAFAFA 0%,#E9E9E9 100%);
-					background: -o-linear-gradient(top, #FAFAFA 0%,#E9E9E9 100%);
-					background: -ms-linear-gradient(top, #FAFAFA 0%,#E9E9E9 100%);
-					background: linear-gradient(top, #FAFAFA 0%,#E9E9E9 100%);
-					filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FAFAFA', endColorstr='#E9E9E9');
-					-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#FAFAFA', endColorstr='#E9E9E9')";
-					border: 1px solid #D5D5D5;
-					border-radius: 4px;
-				}
-					.main-nav.nav-tabs.nav-stacked > li > a > span {
-						color: #4A515B;
-					}
-				.main-nav.nav-tabs.nav-stacked > li.active > a, #main-nav.nav-tabs.nav-stacked > li > a:hover {
-					color: #FFF;
-					background: #3C4049;
-					background: -moz-linear-gradient(top, #4A515B 0%, #3C4049 100%);
-					background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4A515B), color-stop(100%,#3C4049));
-					background: -webkit-linear-gradient(top, #4A515B 0%,#3C4049 100%);
-					background: -o-linear-gradient(top, #4A515B 0%,#3C4049 100%);
-					background: -ms-linear-gradient(top, #4A515B 0%,#3C4049 100%);
-					background: linear-gradient(top, #4A515B 0%,#3C4049 100%);
-					filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4A515B', endColorstr='#3C4049');
-					-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#4A515B', endColorstr='#3C4049')";
-					border-color: #2B2E33;
-				}
-					#main-nav.nav-tabs.nav-stacked > li.active > a, #main-nav.nav-tabs.nav-stacked > li > a:hover > span {
-						color: #FFF;
-					}
-			.main-nav.nav-tabs.nav-stacked > li {
-				margin-bottom: 4px;
-			}
-		.nav-header.collapsed > span.glyphicon-chevron-toggle:before {
-			content: "\e114";
-		}
-		.nav-header > span.glyphicon-chevron-toggle:before {
-			content: "\e113";
-		}
-		footer.duomi-page-footer {
-			background-color: white;
-		}
-			footer.duomi-page-footer .beta-message {
-				color: #a4a4a4;
-			}
-				footer.duomi-page-footer .beta-message a {
-					color: #53a2e4;
-				}
-			footer.duomi-page-footer .list-inline a, footer.authenticated-footer .list-inline li {
-				color: #a4a4a4;
-				padding-bottom: 30px;
-			}
-		footer.duomi-page-footer {
-			background-color: white;
-		}
-			footer.duomi-page-footer .beta-message {
-				color: #a4a4a4;
-			}
-				footer.duomi-page-footer .beta-message a {
-					color: #53a2e4;
-				}
-			footer.duomi-page-footer .list-inline a, footer.authenticated-footer .list-inline li {
-				color: #a4a4a4;
-				padding-bottom: 30px;
-			}
-		/*********************************************自定义部分*********************************************/
-		.secondmenu a {
-			font-size: 12px;
-			color: #4A515B;
-			text-align: left;
-			border-radius: 4px;
-		}
-		.secondmenu > li > a:hover {
-			background-color: #6f7782;
-			border-color: #428bca;
-			color: #fff;
-		}
-		.secondmenu li.active {
-			background-color: #6f7782;
-			border-color: #428bca;
-			border-radius: 4px;
-		}
-			.secondmenu li.active > a {
-				color: #ffffff;
-			}
-		.navbar-static-top {
-			background-color: #212121;
-			margin-bottom: 5px;
-		}
-		.navbar-brand {
-			background: url("__PUBLIC__/images/ruyo_net_w_32.png") no-repeat 10px 8px;
-			display: inline-block;
-			vertical-align: middle;
-			padding-left: 50px;
-			color: #fff;
-		}
-			.navbar-brand:hover {
-				color: #fff;
-			}
-		.collapse.glyphicon-chevron-toggle, .glyphicon-chevron-toggle:before {
-			content: "\e113";
-		}
-		.collapsed.glyphicon-chevron-toggle:before {
-			content: "\e114";
-		}
-	</style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="__PUBLIC__/css/bootstrap.css" rel="stylesheet">
+    <script src="__PUBLIC__/js/html5shiv.min.js"></script>
+    <script src="__PUBLIC__/js/respond.min.js"></script>
+    <script src="__PUBLIC__/js/zDialog.js"></script>
+    <script src="__PUBLIC__/js/zDrag.js"></script>
+    <script src="__PUBLIC__/js/my.js"></script>
+    <!--<script src="__PUBLIC__/laydate/laydate.js"></script>-->
+    <script src="__PUBLIC__/js/jquery-3.1.0.min.js"></script>
+    <script src="__PUBLIC__/js/bootstrap.js"></script>
+    <style>
+        html {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: 'Microsoft Yahei', '微软雅黑', '宋体', \5b8b\4f53, Tahoma, Arial, Helvetica, STHeiti;
+            margin: 0;
+        }
+
+        .main-nav {
+            margin-left: 1px;
+        }
+
+        .main-nav.nav-tabs.nav-stacked > li {
+        }
+
+        .main-nav.nav-tabs.nav-stacked > li > a {
+            padding: 10px 8px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #4A515B;
+            background: #E9E9E9;
+            background: -moz-linear-gradient(top, #FAFAFA 0%, #E9E9E9 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FAFAFA), color-stop(100%, #E9E9E9));
+            background: -webkit-linear-gradient(top, #FAFAFA 0%, #E9E9E9 100%);
+            background: -o-linear-gradient(top, #FAFAFA 0%, #E9E9E9 100%);
+            background: -ms-linear-gradient(top, #FAFAFA 0%, #E9E9E9 100%);
+            background: linear-gradient(top, #FAFAFA 0%, #E9E9E9 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FAFAFA', endColorstr='#E9E9E9');
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#FAFAFA', endColorstr='#E9E9E9')";
+            border: 1px solid #D5D5D5;
+            border-radius: 4px;
+        }
+
+        .main-nav.nav-tabs.nav-stacked > li > a > span {
+            color: #4A515B;
+        }
+
+        .main-nav.nav-tabs.nav-stacked > li.active > a, #main-nav.nav-tabs.nav-stacked > li > a:hover {
+            color: #FFF;
+            background: #3C4049;
+            background: -moz-linear-gradient(top, #4A515B 0%, #3C4049 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4A515B), color-stop(100%, #3C4049));
+            background: -webkit-linear-gradient(top, #4A515B 0%, #3C4049 100%);
+            background: -o-linear-gradient(top, #4A515B 0%, #3C4049 100%);
+            background: -ms-linear-gradient(top, #4A515B 0%, #3C4049 100%);
+            background: linear-gradient(top, #4A515B 0%, #3C4049 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4A515B', endColorstr='#3C4049');
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#4A515B', endColorstr='#3C4049')";
+            border-color: #2B2E33;
+        }
+
+        #main-nav.nav-tabs.nav-stacked > li.active > a, #main-nav.nav-tabs.nav-stacked > li > a:hover > span {
+            color: #FFF;
+        }
+
+        .main-nav.nav-tabs.nav-stacked > li {
+            margin-bottom: 4px;
+        }
+
+        .nav-header.collapsed > span.glyphicon-chevron-toggle:before {
+            content: "\e114";
+        }
+
+        .nav-header > span.glyphicon-chevron-toggle:before {
+            content: "\e113";
+        }
+
+        footer.duomi-page-footer {
+            background-color: white;
+        }
+
+        footer.duomi-page-footer .beta-message {
+            color: #a4a4a4;
+        }
+
+        footer.duomi-page-footer .beta-message a {
+            color: #53a2e4;
+        }
+
+        footer.duomi-page-footer .list-inline a, footer.authenticated-footer .list-inline li {
+            color: #a4a4a4;
+            padding-bottom: 30px;
+        }
+
+        footer.duomi-page-footer {
+            background-color: white;
+        }
+
+        footer.duomi-page-footer .beta-message {
+            color: #a4a4a4;
+        }
+
+        footer.duomi-page-footer .beta-message a {
+            color: #53a2e4;
+        }
+
+        footer.duomi-page-footer .list-inline a, footer.authenticated-footer .list-inline li {
+            color: #a4a4a4;
+            padding-bottom: 30px;
+        }
+
+        /*********************************************自定义部分*********************************************/
+        .secondmenu a {
+            font-size: 12px;
+            color: #4A515B;
+            text-align: left;
+            border-radius: 4px;
+        }
+
+        .secondmenu > li > a:hover {
+            background-color: #6f7782;
+            border-color: #428bca;
+            color: #fff;
+        }
+
+        .secondmenu li.active {
+            background-color: #6f7782;
+            border-color: #428bca;
+            border-radius: 4px;
+        }
+
+        .secondmenu li.active > a {
+            color: #ffffff;
+        }
+
+        .navbar-static-top {
+            background-color: #212121;
+            margin-bottom: 5px;
+        }
+
+        .navbar-brand {
+            background: url("__PUBLIC__/images/ruyo_net_w_32.png") no-repeat 10px 8px;
+            display: inline-block;
+            vertical-align: middle;
+            padding-left: 50px;
+            color: #fff;
+        }
+
+        .navbar-brand:hover {
+            color: #fff;
+        }
+
+        .collapse.glyphicon-chevron-toggle, .glyphicon-chevron-toggle:before {
+            content: "\e113";
+        }
+
+        .collapsed.glyphicon-chevron-toggle:before {
+            content: "\e114";
+        }
+    </style>
 </head>
 
 <body>
 <script>
     var xmlhttp;
-    function foritems2(all,url="__URL__/foritems2",outid="result",warn="N",warnword="确定吗？",add="正在加载。。。"){
-        if(warn=="Y"){
-            if(!confirm(warnword)){
+    function foritems2(all, url="__URL__/foritems2", outid="result", warn="N", warnword="确定吗？", add="正在加载。。。") {
+        if (warn == "Y") {
+            if (!confirm(warnword)) {
                 return false;
             }
         }
-        xmlhttp=null;
-        if(window.XMLHttpRequest){
-            xmlhttp=new XMLHttpRequest();
-        }else{
-            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        xmlhttp = null;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
         }
-        xmlhttp.onreadystatechange=function(){
-            if (xmlhttp.readyState==4 && xmlhttp.status==200){
-                set_innerHTML(outid,xmlhttp.responseText);
-            }else{
-                set_innerHTML(outid,add);
+        xmlhttp.onreadystatechange = function () {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                set_innerHTML(outid, xmlhttp.responseText);
+            } else {
+                set_innerHTML(outid, add);
             }
         }
-        xmlhttp.open("POST",url,false);//控制ajax请求为异步还是同步
-        xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xmlhttp.open("POST", url, false);//控制ajax请求为异步还是同步
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xmlhttp.send(all);
     }
-    function saveadd(){
-        var checkbox=document.getElementsByName("optionsRadios");
-        for(var i=0;i<checkbox.length;i++){
-            if(checkbox[i].checked){
-                var itm_type=checkbox[i].value;
+    function saveadd() {
+        var checkbox = document.getElementsByName("optionsRadios");
+        for (var i = 0; i < checkbox.length; i++) {
+            if (checkbox[i].checked) {
+                var itm_type = checkbox[i].value;
             }
         }
         //alert("item2id=6&act=saveadd"+"&itm_name="+document.getElementById("itm_name").value+"&itm_type="+itm_type+"&itm_id="+document.getElementById("itm_id").value+"&itm_belo="+document.getElementById("itm_belo").value+"&itm_from="+document.getElementById("itm_from").value+"&itm_cols="+document.getElementById("itm_cols").value);
-        foritems2(all="act=saveadd&item2id=6"+"&itm_name="+document.getElementById("itm_name").value+"&itm_type="+itm_type+"&itm_id="+document.getElementById("itm_id").value+"&itm_belo="+document.getElementById("itm_belo").value+"&itm_from="+document.getElementById("itm_from").value,url="foritems2",outid="message",warn="N",warnword="确定吗？",add="正在执行。。。");
+        foritems2(all = "act=saveadd&item2id=6" + "&itm_name=" + document.getElementById("itm_name").value + "&itm_type=" + itm_type + "&itm_id=" + document.getElementById("itm_id").value + "&itm_belo=" + document.getElementById("itm_belo").value, url = "foritems2", outid = "message", warn = "Y", warnword = "确定添加该菜单吗？", add = "正在执行。。。");
     }
-    function saveedit(){
-        var checkbox=document.getElementsByName("optionsRadios");
-        for(var i=0;i<checkbox.length;i++){
-            if(checkbox[i].checked){
-                var itm_type=checkbox[i].value;
+    function saveedit() {
+        var checkbox = document.getElementsByName("optionsRadios");
+        for (var i = 0; i < checkbox.length; i++) {
+            if (checkbox[i].checked) {
+                var itm_type = checkbox[i].value;
             }
         }
         //alert("act=saveedit&item2id=6"+"&itm_title="+document.getElementById("itm_name").value+"&itm_type="+itm_type+"&itm_id="+document.getElementById("itm_id").value+"&itm_belo="+document.getElementById("itm_belo").value+"&itm_from="+document.getElementById("itm_from").value);
-        foritems2(all="act=saveedit&item2id=6"+"&itm_name="+document.getElementById("itm_name").value+"&itm_type="+itm_type+"&itm_num="+document.getElementById("itm_num").value+"&itm_belo="+document.getElementById("itm_belo").value+"&itm_id="+document.getElementById("itm_id").value+"&old_itm_sec="+document.getElementById("old_itm_sec").value+"&old_itm_type="+document.getElementById("old_itm_type").value+"&itm_from="+document.getElementById("itm_from").value,url="__URL__/foritems2",outid="message",warn="Y",warnword="确定提交吗？",add="数据库错误，请检查添加信息！");
+        foritems2(all = "act=saveedit&item2id=6" + "&itm_name=" + document.getElementById("itm_name").value + "&itm_type=" + itm_type + "&itm_num=" + document.getElementById("itm_num").value + "&itm_belo=" + document.getElementById("itm_belo").value + "&itm_id=" + document.getElementById("itm_id").value + "&old_itm_sec=" + document.getElementById("old_itm_sec").value + "&old_itm_type=" + document.getElementById("old_itm_type").value + "&itm_from=" + document.getElementById("itm_from").value, url = "__URL__/foritems2", outid = "message", warn = "Y", warnword = "确定提交吗？", add = "数据库错误，请检查添加信息！");
     }
-    function create_warn(){
+    function create_warn() {
         /*alert("__APP__/save_create");*/
-        document.getElementById("create_warn").innerHTML='<form class="form-horizontal" role="form" style="padding-left:10%;padding-top:3%;width:80%;"><div class="form-group"><label for="firstname" class="col-sm-2 control-label">报警类型</label><div class="col-sm-10"><input id="warn_type" type="text" class="form-control" placeholder="请输入报警类型"></div></div><div class="form-group"><label for="lastname" class="col-sm-2 control-label">报警级别</label><div class="col-sm-10"><input type="text" class="form-control" id="warn_level" placeholder="请输入报警级别"></div></div><div class="form-group"><label for="lastname" class="col-sm-2 control-label">报警参数</label><div class="col-sm-10"><input type="text" class="form-control" id="warn_key" placeholder="报警信息的关键参数的参数名"></div></div><div class="form-group"><label for="lastname" class="col-sm-2 control-label">报警阀值</label><div class="col-sm-10"><input type="text" class="form-control" id="warn_value" placeholder="报警信息的关键参数的参数阀值"></div></div><div class="form-group"><label for="lastname" class="col-sm-2 control-label">关系逻辑</label><div class="col-sm-10"><select class="form-control" id="warn_logic"><option value=4>无条件报警</option><option value=1>按大于匹配</option><option value=2>按小于匹配</option><option value=3>按包含匹配</option></select></div></div><div class="form-group"><label for="lastname" class="col-sm-2 control-label">报警对象</label><div class="col-sm-10"><input type="text" class="form-control" id="warn_send" placeholder="请输入报警对象，以“,”分隔"></div></div><div class="form-group"><div class="col-sm-offset-2 col-sm-10"><button onclick=foritems2(all="warn_type="+document.getElementById("warn_type").value+"&warn_level="+document.getElementById("warn_level").value+"&warn_key="+document.getElementById("warn_key").value+"&warn_value="+document.getElementById("warn_value").value+"&warn_logic="+document.getElementById("warn_logic").value+"&warn_send="+document.getElementById("warn_send").value,url="__MODULE__/warn/savecreate",outid="create_info",warn="Y",warnword="确定提交吗？",add="数据库错误，请检查添加信息！") type="button" class="btn btn-default">提交</button><button type="button" class="btn btn-default" onclick=document.getElementById("create_warn").innerHTML="" >返回</button></div></div></form><div id="create_info" style="padding-left:15%;padding-top:3%;width:70%;color:red;"></div>';
+        document.getElementById("create_warn").innerHTML = '<form class="form-horizontal" role="form" style="padding-left:10%;padding-top:3%;width:80%;"><div class="form-group"><label for="firstname" class="col-sm-2 control-label">报警类型</label><div class="col-sm-10"><input id="warn_type" type="text" class="form-control" placeholder="请输入报警类型"></div></div><div class="form-group"><label for="lastname" class="col-sm-2 control-label">报警级别</label><div class="col-sm-10"><input type="text" class="form-control" id="warn_level" placeholder="请输入报警级别"></div></div><div class="form-group"><label for="lastname" class="col-sm-2 control-label">报警参数</label><div class="col-sm-10"><input type="text" class="form-control" id="warn_key" placeholder="报警信息的关键参数的参数名"></div></div><div class="form-group"><label for="lastname" class="col-sm-2 control-label">报警阀值</label><div class="col-sm-10"><input type="text" class="form-control" id="warn_value" placeholder="报警信息的关键参数的参数阀值"></div></div><div class="form-group"><label for="lastname" class="col-sm-2 control-label">关系逻辑</label><div class="col-sm-10"><select class="form-control" id="warn_logic"><option value=4>无条件报警</option><option value=1>按大于匹配</option><option value=2>按小于匹配</option><option value=3>按包含匹配</option></select></div></div><div class="form-group"><label for="lastname" class="col-sm-2 control-label">报警对象</label><div class="col-sm-10"><textarea id="warn_send" style="font-size:0.3cm;word-wrap: break-word;word-break:break-all;" class="form-control" id="warn_send" placeholder="请输入报警对象，以换行分隔"></textarea></div></div><div class="form-group"><div class="col-sm-offset-2 col-sm-10"><button onclick=foritems2(all="warn_type="+document.getElementById("warn_type").value+"&warn_level="+document.getElementById("warn_level").value+"&warn_key="+document.getElementById("warn_key").value+"&warn_value="+document.getElementById("warn_value").value+"&warn_logic="+document.getElementById("warn_logic").value+"&warn_send="+document.getElementById("warn_send").value,url="__MODULE__/warn/savecreate",outid="create_info",warn="Y",warnword="确定提交吗？",add="数据库错误，请检查添加信息！") type="button" class="btn btn-default">提交</button><button type="button" class="btn btn-default" onclick=document.getElementById("create_warn").innerHTML="" >返回</button></div></div></form><div id="create_info" style="padding-left:15%;padding-top:3%;width:70%;color:red;"></div>';
     }
-    function create_cols_warn(){
+    function create_cols_warn() {
         /*alert("__APP__/save_create");*/
-        document.getElementById("create_warn").innerHTML='<form class="form-horizontal" role="form" style="padding-left:10%;padding-top:3%;width:80%;"><div class="form-group"><label for="firstname" class="col-sm-2 control-label">报警字段id</label><div class="col-sm-10"><input id="warn_colid" type="text" class="form-control" placeholder="请输入报警字段id，可在系统设置->菜单设置下查看各字段id"></div></div><div class="form-group"><label for="firstname" class="col-sm-2 control-label">报警类型</label><div class="col-sm-10"><input id="warn_type" type="text" class="form-control" placeholder="请输入报警类型"></div></div><div class="form-group"><label for="lastname" class="col-sm-2 control-label">报警阀值</label><div class="col-sm-10"><input type="text" class="form-control" id="warn_value" placeholder="报警信息的关键参数的参数阀值"></div></div><div class="form-group"><label for="lastname" class="col-sm-2 control-label">关系逻辑</label><div class="col-sm-10"><select class="form-control" id="warn_logic"><option value=1>按大于匹配</option><option value=2>按小于匹配</option><option value=3>按包含匹配</option></select></div></div><div class="form-group"><label for="lastname" class="col-sm-2 control-label">归属服务报警ID</label><div class="col-sm-10"><input type="number" class="form-control" id="warn_center_id" placeholder="请输入服务报警ID"></div></div><div class="form-group"><div class="col-sm-offset-2 col-sm-10"><button onclick=foritems2(all="colid="+document.getElementById("warn_colid").value+"&warn_type="+document.getElementById("warn_type").value+"&warn_value="+document.getElementById("warn_value").value+"&warn_logic="+document.getElementById("warn_logic").value+"&warn_center_id="+document.getElementById("warn_center_id").value,url="__MODULE__/warn/savecreatecols",outid="create_info",warn="Y",warnword="确定提交吗？",add="数据库错误，请检查添加信息！") type="button" class="btn btn-default">提交</button><button type="button" class="btn btn-default" onclick=document.getElementById("create_warn").innerHTML="" >返回</button></div></div></form><div id="create_info" style="padding-left:15%;padding-top:3%;width:70%;color:red;"></div>';
+        document.getElementById("create_warn").innerHTML = '<form class="form-horizontal" role="form" style="padding-left:10%;padding-top:3%;width:80%;"><div class="form-group"><label for="firstname" class="col-sm-2 control-label">报警字段id</label><div class="col-sm-10"><input id="warn_colid" type="text" class="form-control" placeholder="请输入报警字段id，可在系统设置->菜单设置下查看各字段id"></div></div><div class="form-group"><label for="firstname" class="col-sm-2 control-label">报警类型</label><div class="col-sm-10"><input id="warn_type" type="text" class="form-control" placeholder="请输入报警类型"></div></div><div class="form-group"><label for="lastname" class="col-sm-2 control-label">报警阀值</label><div class="col-sm-10"><input type="text" class="form-control" id="warn_value" placeholder="报警信息的关键参数的参数阀值"></div></div><div class="form-group"><label for="lastname" class="col-sm-2 control-label">关系逻辑</label><div class="col-sm-10"><select class="form-control" id="warn_logic"><option value=1>按大于匹配</option><option value=2>按小于匹配</option><option value=3>按包含匹配</option></select></div></div><div class="form-group"><label for="lastname" class="col-sm-2 control-label">归属服务报警ID</label><div class="col-sm-10"><input type="number" class="form-control" id="warn_center_id" placeholder="请输入服务报警ID"></div></div><div class="form-group"><div class="col-sm-offset-2 col-sm-10"><button onclick=foritems2(all="colid="+document.getElementById("warn_colid").value+"&warn_type="+document.getElementById("warn_type").value+"&warn_value="+document.getElementById("warn_value").value+"&warn_logic="+document.getElementById("warn_logic").value+"&warn_center_id="+document.getElementById("warn_center_id").value,url="__MODULE__/warn/savecreatecols",outid="create_info",warn="Y",warnword="确定提交吗？",add="数据库错误，请检查添加信息！") type="button" class="btn btn-default">提交</button><button type="button" class="btn btn-default" onclick=document.getElementById("create_warn").innerHTML="" >返回</button></div></div></form><div id="create_info" style="padding-left:15%;padding-top:3%;width:70%;color:red;"></div>';
     }
-    function changecolor(obj){
+    function changecolor(obj) {
         /*当a标签被点击时变色*/
-        as=document.getElementsByClassName("item2");
-        for(var i=0;i<as.length;i++){
-            as[i].style.background="";
-            as[i].style.color="";
+        as = document.getElementsByClassName("item2");
+        for (var i = 0; i < as.length; i++) {
+            as[i].style.background = "";
+            as[i].style.color = "";
         }
-        obj.style.background="#212121";
-        obj.style.color="white";
+        obj.style.background = "#212121";
+        obj.style.color = "white";
     }
-    function changeulcolor(obj){
-        all=document.getElementsByClassName("item1");
-        for(var i=0;i<all.length;i++){
-            all[i].style.background="";
-            all[i].style.color="#212121";
+    function changeulcolor(obj) {
+        all = document.getElementsByClassName("item1");
+        for (var i = 0; i < all.length; i++) {
+            all[i].style.background = "";
+            all[i].style.color = "#212121";
         }
-        obj.style.background="#212121";
-        obj.style.color="white";
+        obj.style.background = "#212121";
+        obj.style.color = "white";
     }
 </script>
-	<div class="navbar navbar-duomi navbar-static-top" role="navigation">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="#" id="logo">监控管理系统
-				</a>
-			</div>
-			<div class="navbar-right">
+<div class="navbar navbar-duomi navbar-static-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#" id="logo">监控管理系统
+            </a>
+        </div>
+        <div class="navbar-right">
 				<span class="navbar-brand" style="background:none">欢迎使用 [<a id="logout" href="logout">退出</a>]
 				</span>
-			</div>
-		</div>
-	</div>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-2">
-				<ul id="main-nav" class="main-nav nav nav-tabs nav-stacked" style="">
-				<for start="1" end="$items_max+1">
-					<if condition="$items1[$i] neq null">
-						<if condition="$items2[$i] neq null">
-							<li><a href="#<{$items1[$i]['title']}>" class="nav-header collapsed item1" data-toggle="collapse"><{$items1[$i]['title']}></a>
-							<ul id="<{$items1[$i]['title']}>" class="nav nav-list secondmenu collapse" style="height: 0px;">
-							<for start="0" end="$items2s[$i]" name="n">
-								<li><a class="item2" href="#" onclick=changecolor(this);foritems2("item2id=<{$items2[$i]['id'][$n]}>&item_type=2&act=list&url=__URL__/foritems2")><{$items2[$i]['title'][$n]}></a></li>
-							</for>
-							</ul>
-						<else />
-							<li><a  href="#" class="nav-header collapsed item2" data-toggle="collapse" onclick=changecolor(this);foritems2("item1id=<{$items1[$i]['id']}>&item_type=1&act=list&url=__URL__/foritems2")><{$items1[$i]['title']}></a>
-						</if>
-					</if>
-					</li>
-				</for>
-				<li>
-					<a href="#报警区域" class="nav-header collapsed item1" data-toggle="collapse">报警区域</a>
-					<ul id="报警区域" class="nav nav-list secondmenu collapse" style="height: 0px;">
-						<li>
-							<a class="item2" href="#"  onclick=changecolor(this);foritems2(all="",url="__APP__/warn/readwarn",outid="result",warn="N",warnword="确定吗？",add="正在加载。。。")>服务报警设置</a>
-						</li>
-						<li>
-							<a class="item2" href="#"  onclick=changecolor(this);foritems2(all="",url="__APP__/warn/readcols",outid="result",warn="N",warnword="确定吗？",add="正在加载。。。")>监控报警设置</a>
-						</li>
-						<!--
-						<li>
-							<a href="#"  onclick=foritems2(all="123123",url="__APP__/warn/moniwarn",outid="result",warn="N",warnword="确定吗？",add="正在加载。。。")>监控报警设置</a>
-						</li>
-						-->
-						<li>
-							<a class="item2" href="#"  onclick=changecolor(this);foritems2(all="",url="__APP__/warn/readhist",outid="result",warn="N",warnword="确定吗？",add="正在加载。。。")>报警记录</a>
-						</li>
-					</ul>
-				</li>
-				</ul>
-			</div>
-			<div class="col-md-10" id="result">
-				<font style="font-size:0.6cm">欢迎使用云集监控系统</font>
-			</div>
-		</div>
-	</div>
-	<script src="__PUBLIC__/js/jquery.js"></script>
-	<script src="__PUBLIC__/js/bootstrap.min.js"></script>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+            <ul id="main-nav" class="main-nav nav nav-tabs nav-stacked" style="">
+                <for start="1" end="$items_max+1">
+                    <if condition="$items1[$i] neq null">
+                        <if condition="$items2[$i] neq null">
+                            <li><a href="#<{$items1[$i]['title']}>" class="nav-header collapsed item1"
+                                   data-toggle="collapse"><{$items1[$i]['title']}></a>
+                                <ul id="<{$items1[$i]['title']}>" class="nav nav-list secondmenu collapse"
+                                    style="height: 0px;">
+                                    <for start="0" end="$items2s[$i]" name="n">
+                                        <li><a class="item2" href="#"
+                                               onclick=changecolor(this);foritems2("item2id=<{$items2[$i]['id'][$n]}>&item_type=2&act=list&url=__URL__/foritems2")><{$items2[$i]['title'][$n]}></a>
+                                        </li>
+                                    </for>
+                                </ul>
+                                <else/>
+                            <li><a href="#" class="nav-header collapsed item2" data-toggle="collapse"
+                                   onclick=changecolor(this);foritems2("item1id=<{$items1[$i]['id']}>&item_type=1&act=list&url=__URL__/foritems2")><{$items1[$i]['title']}></a>
+                        </if>
+                    </if>
+                    </li>
+                </for>
+                <li>
+                    <a href="#报警区域" class="nav-header collapsed item1" data-toggle="collapse">报警区域</a>
+                    <ul id="报警区域" class="nav nav-list secondmenu collapse" style="height: 0px;">
+                        <li>
+                            <a class="item2" href="#"
+                               onclick=changecolor(this);foritems2(all="",url="__APP__/warn/readwarn",outid="result",warn="N",warnword="确定吗？",add="正在加载。。。")>服务报警设置</a>
+                        </li>
+                        <li>
+                            <a class="item2" href="#"
+                               onclick=changecolor(this);foritems2(all="",url="__APP__/warn/readcols",outid="result",warn="N",warnword="确定吗？",add="正在加载。。。")>监控报警设置</a>
+                        </li>
+                        <!--
+                        <li>
+                            <a href="#"  onclick=foritems2(all="123123",url="__APP__/warn/moniwarn",outid="result",warn="N",warnword="确定吗？",add="正在加载。。。")>监控报警设置</a>
+                        </li>
+                        -->
+                        <li>
+                            <a class="item2" href="#"
+                               onclick=changecolor(this);foritems2(all="",url="__APP__/warn/readhist",outid="result",warn="N",warnword="确定吗？",add="正在加载。。。")>历史报警记录</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-10" id="result">
+            <font style="font-size:0.6cm">欢迎使用云集监控系统</font>
+        </div>
+    </div>
+</div>
+<script src="__PUBLIC__/js/jquery.js"></script>
+<script src="__PUBLIC__/js/bootstrap.min.js"></script>
 </body>
 </html>

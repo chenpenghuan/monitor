@@ -81,13 +81,13 @@ class Recieve(object):
     def _format_addr(self,s):
         name, addr = parseaddr(s)
         return formataddr((Header(name, 'utf-8').encode(), addr))
-    def send_mail(self, from_addr='13919636933@139.com',password='575chenpenghuan',to_addr='cphchenpenghuan@gmail.com,1034478083@qq.com',smtp_server='smtp.139.com',content='邮件正文',from_user='发件人',to_user='云集管理员',title='邮件标题'):
+    def send_mail(self, from_addr='13919636933@139.com',password='575chenpenghuan',to_addr='cphchenpenghuan@gmail.com,1034478083@qq.com',smtp_server='smtp.139.com',smtp_server_port=25,content='邮件正文',from_user='发件人',to_user='云集管理员',title='邮件标题'):
         try:
             msg = MIMEText(content, 'plain', 'utf-8')
             msg['From'] = self. _format_addr(from_user+' <%s>' % from_addr)
             msg['To'] = self._format_addr(to_user+' <%s>' % to_addr)
             msg['Subject'] = Header(title, 'utf-8').encode()
-            server = smtplib.SMTP(smtp_server, 25)
+            server = smtplib.SMTP_SSL(smtp_server, smtp_server_port)
             server.set_debuglevel(0)
             server.login(from_addr, password)
             server.sendmail(from_addr, to_addr.split(','), msg.as_string())
@@ -128,7 +128,8 @@ class Recieve(object):
                     print('act:'+str(act))
                     if act==1:      # 需要报警
                         if len(configs[5]) > 1:
-                            result = self.send_mail(from_user='云集监控', to_user='云集管理员', content=conts.get('content'),title=conts.get('title'),to_addr=configs[5])  # 发送报警邮件，如果失败则写入日志文件
+                            result = self.send_mail( from_addr='kellychen@winnerlook.com',password='cCpPhH573',smtp_server='smtp.exmail.qq.com',smtp_server_port=465,from_user='云集监控', to_user='云集管理员', content=conts.get('content'),title=conts.get('title'),to_addr=configs[5])  # 发送报警邮件，如果失败则写入日志文件
+                            print(result)
                             print("报警信息发送成功")
                             if result != True:
                                 self.writelog(conts['script'] + result)
