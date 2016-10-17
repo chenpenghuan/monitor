@@ -7,7 +7,6 @@ from redis import Redis
 
 
 class Monitor(object):
-
     def __init__(self, confsfile, logfile):
         self.confsfile = confsfile
         self.confs = {}
@@ -87,8 +86,8 @@ class Monitor(object):
         result = {}
         try:
             for m in data:
-                    # db.insert({"id": m[0], "name": m[1], "cont": m[2]})
-                    # self.confs[m[0]][m[1]] = m[2]
+                # db.insert({"id": m[0], "name": m[1], "cont": m[2]})
+                # self.confs[m[0]][m[1]] = m[2]
                 if self.confs.get(m[0]) is None:
                     self.confs[m[0]] = {}
                 self.confs[
@@ -108,12 +107,12 @@ class Monitor(object):
         cc = self.readconf()
         # print(cc)
         if cc.get(0) is not False:
-            print('需要刷新配置数据')
+            # print('需要刷新配置数据')
             self.traceproc('需要刷新配置数据' + "\t" + str(cc[1]))
             data = self.readconf()
             while data[0] is False:
                 sleep(3)
-                print('数据库连接不上' + str(data[1]))
+                # print('数据库连接不上' + str(data[1]))
                 self.traceproc('数据库连接不上' + "\t" + str(data[1]))
                 data = self.readconf()
             data = data[1]
@@ -124,10 +123,10 @@ class Monitor(object):
                 return False
         else:
             self.confs = cc.get(1)
-        collected=False
+        collected = False
         for m in self.confs:  # m为cont_conf中的item_id
             sql = []
-            print('菜单id' + str(m))
+            # print('菜单id' + str(m))
             sql.append(
                 'update contents set isshow=0 where cont_id in (select id from cont_conf where item_id=' + str(m) + ')')
             try:
@@ -140,7 +139,7 @@ class Monitor(object):
                     if type(data) == list:
                         data = data[0]
                         # print(data)
-                    print(data.get('key'))
+                    # print(data.get('key'))
                     if type(data) == dict:
                         key = data.get('key')
                         if key is not None:
@@ -153,25 +152,31 @@ class Monitor(object):
                                 # print(data[key])
                                 # print(self.confs[m][n]['cont_url'])
                                 if self.confs[m][n]['cont_var'] != key:
-                                    sql.append('insert into contents(cont_id,cont_text,update_sec,update_date) values(' + str(n) + ',"' + str(data[i].get(
-                                        self.confs[m][n]['cont_var'])) + '",' + str(upsec) + ',"' + strftime("%Y-%m-%d %H:%M:%S", localtime(time())) + '")')
+                                    sql.append(
+                                        'insert into contents(cont_id,cont_text,update_sec,update_date) values(' + str(
+                                            n) + ',"' + str(data[i].get(
+                                            self.confs[m][n]['cont_var'])) + '",' + str(upsec) + ',"' + strftime(
+                                            "%Y-%m-%d %H:%M:%S", localtime(time())) + '")')
                                 else:
-                                    sql.append('insert into contents(cont_id,cont_text,update_sec,update_date) values(' + str(
-                                        n) + ',"' + str(i) + '",' + str(upsec) + ',"' + strftime("%Y-%m-%d %H:%M:%S", localtime(time())) + '")')
+                                    sql.append(
+                                        'insert into contents(cont_id,cont_text,update_sec,update_date) values(' + str(
+                                            n) + ',"' + str(i) + '",' + str(upsec) + ',"' + strftime(
+                                            "%Y-%m-%d %H:%M:%S", localtime(time())) + '")')
                                 upsec = upsec + 1
-                            it = self.insert(sql)       # 写入数据到contents表
-            # 调用collect_warn_from_database.py
+                            it = self.insert(sql)  # 写入数据到contents表
+                            # 调用collect_warn_from_database.py
                             if it[0] is False:
                                 self.traceproc('数据库写入错误' + "\t" + str(it[1]))
                             else:
-                                collected=True
+                                collected = True
             except Exception as err:
                 self.traceproc(
                     'URL解析错误' + "\t" + str(self.confs[m][n]['cont_url']) + ':' + str(err))
         if collected is True:
             conn = Redis(host='192.168.1.154', port=6379, password='123123')
-            conn.publish('warn_collect','1')
-            print('此次刷新已完成')
+            conn.publish('warn_collect', '1')
+            # print('此次刷新已完成')
+
 
 # 变动位置
 if __name__ == "__main__":

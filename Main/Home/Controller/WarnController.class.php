@@ -5,6 +5,12 @@ use Think\Controller;
 
 class WarnController extends Controller
 {
+    public function _initialize(){
+        if (!isset($_SESSION['username'])) {
+            echo '<script>alert("您的登陆信息已经过期，请重新登陆!");window.location.href="' . C('URL_LOGIN') . '";</script>';
+            exit();
+        }
+    }
     //读取报警相关配置
     public function readwarn()
     {

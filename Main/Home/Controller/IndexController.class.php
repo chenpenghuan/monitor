@@ -4,6 +4,20 @@ use Think\Controller;
 
 class IndexController extends Controller
 {
+    public function _initialize(){
+        if(ACTION_NAME=='login') {
+            $this->display('login');
+            exit();
+        }else{
+            $actions=array('chkimg','check_verify','chklogin');
+            if(in_array(ACTION_NAME,$actions)==False){
+                if (!isset($_SESSION['username'])) {
+                    echo '<script>alert("您的登陆信息已经过期，请重新登录!");window.location.href="' . C('URL_LOGIN') . '";</script>';
+                    exit();
+                }
+            }
+        }
+    }
     public function index($display = 1)
     {
         //提前加载报警模块的数据
@@ -13,7 +27,6 @@ class IndexController extends Controller
         F('warn_cols_conf', $wcs);
         $wc = M()->query('select warn_cont.id,warn_cont.warn_send,warn_cont.warn_date,warn_conf.warn_level,warn_conf.warn_type,warn_cont.warn_cont from warn_cont left join warn_conf on warn_conf.id=warn_cont.warn_id order by warn_cont.id desc');
         F('warn_cont', $wc);
-        $this->chkstatus();
         $this->readjson();
         $item_conf = M();
         $sql = 'select item1_conf.id as item1_id,item1_conf.item1_num,item1_conf.item1_title,item1_chan,item2_conf.id,item2_conf.item2_title,item2_conf.item2_num,item2_chan from item1_conf left join item2_conf on item2_conf.item1_num=item1_conf.item1_num order by item1_conf.item1_num asc,item2_conf.item2_num asc';
@@ -99,10 +112,7 @@ class IndexController extends Controller
 
     public function chkstatus()
     {
-        if (!isset($_SESSION['username'])) {
-            echo '<script>alert("登录超时!");window.location.href="' . C('URL_LOGIN') . '";</script>';
-            exit();
-        }
+
     }
 
     public function logout()
@@ -153,7 +163,6 @@ class IndexController extends Controller
 
     public function foritems2()
     {
-        $this->chkstatus();
         $this->index($display = 0);
         $confs = F('confs');
         $items1 = F('items1');
@@ -542,11 +551,6 @@ class IndexController extends Controller
         }
     }
 
-    public function test()
-    {
-        $table = M('pass_config');
-        echo $table->where(array('setmanu' => 0))->find()['setmanu'];
-    }
 
     public function readjson()
     {
@@ -566,12 +570,7 @@ class IndexController extends Controller
         F('confs', $confs);
     }
 
-    public function fromzp()
-    {
-        header('Content-type: text/json');
-        echo stripslashes(json_encode(array("test1" => "测试一的内容" . date("Y-m-d H:m:s", time()), "test2" => "测试2的内容" . date("Y-m-d H:m:s", time())), JSON_UNESCAPED_UNICODE));
-        exit();
-    }
+
 }
 
 ?>
