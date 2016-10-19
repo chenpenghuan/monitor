@@ -138,7 +138,7 @@ class WarnController extends Controller {
 			$tbfoot = '</table></div>';
 			//var_dump($_POST);
 			echo $tbhead . $tbbody . $tbfoot;
-			echo '<div style="float:right">共' . $pages . '页，共' . $strs_c . '条<button onclick=foritems2(all="key=' . $_POST['key'] . '&value=' . $_POST['value'] . '&page=' . ($page - 1) . '",url="/monitor/warn/readhist",outid="result",warn="N",warnword="确定吗？",add="正在加载。。。")>上一页</button><input type="text" style="width:40px;" value="' . $page . '" /><button onclick=foritems2(all="key=' . $_POST['key'] . '&value=' . $_POST['value'] . '&page=' . ($page + 1) . '",url="/monitor/warn/readhist",outid="result",warn="N",warnword="确定吗？",add="正在加载。。。")>下一页</button></div>';
+			echo '<div style="float:right">共' . $pages . '页，共' . $strs_c . '条<button onclick=foritems2(all="key=' . $_POST['key'] . '&value=' . $_POST['value'] . '&page=' . ($page - 1) . '",url="/monitor/warn/readhist",outid="result",warn="N",warnword="确定吗？",add="正在加载。。。")>上一页</button><input id="page" onkeydown=if(event.keyCode==13){foritems2(all="key=' . $_POST['key'] . '&value=' . $_POST['value'] . '&page="+document.getElementById(\'page\').value,url="/monitor/warn/readhist",outid="result",warn="N",warnword="确定吗？",add="正在加载。。。")} type="text" style="width:40px;" value="' . $page . '" /><button onclick=foritems2(all="key=' . $_POST['key'] . '&value=' . $_POST['value'] . '&page=' . ($page + 1) . '",url="/monitor/warn/readhist",outid="result",warn="N",warnword="确定吗？",add="正在加载。。。")>下一页</button></div>';
 		}
 		exit();
 	}
