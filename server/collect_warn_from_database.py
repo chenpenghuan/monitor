@@ -54,10 +54,9 @@ class formatdata(object):
     def main(self):
         sub = self.conn.pubsub()
         sub.subscribe(self.subcha)
-        contstrs=[]
         for msg in sub.listen():
             if msg['type'] == 'message':    #这里开始插件各自的自定义操作
-                print('被调用')
+                contstrs=[]
                 try:
                     if path.isfile(self.confsfile):
                         confsfile = open(self.confsfile)
