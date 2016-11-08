@@ -271,6 +271,7 @@ class WarnController extends Controller
         exit();
     }
 
+<<<<<<< HEAD
     //保存监控报警配置
     public function savecreatecols()
     {
@@ -304,6 +305,151 @@ class WarnController extends Controller
                     echo '添加失败,请联系管理员！';
                 }
             }
+=======
+		foreach ($wc as $k => $v) {
+			//取出所有符合搜索条件的内容
+			if ($v['warn_send'] == 1) {
+				$warn_send = '是';
+			} else {
+				$warn_send = '否';
+			}
+			if ($_POST['value'] != "") {
+				if ($_POST['key'] == 'level') {
+					if ($v[$_POST['key']] == $_POST['value']) {
+						$trs[] = '<tr><td>' . $v['id'] . '</td><td>' . $warn_send . '</td><td>' . $v['warn_date'] . '</td><td>' . $v['warn_level'] . '</td><td>' . $v['warn_type'] . '</td><td>' . $v['warn_cont'] . '</td></tr>';
+					}
+				} else {
+					if (strstr($v[$_POST['key']], $_POST['value'])) {
+						$trs[] = '<tr><td>' . $v['id'] . '</td><td>' . $warn_send . '</td><td>' . $v['warn_date'] . '</td><td>' . $v['warn_level'] . '</td><td>' . $v['warn_type'] . '</td><td>' . $v['warn_cont'] . '</td></tr>';
+					}
+				}
+			} else {
+				$trs[] = '<tr><td>' . $v['id'] . '</td><td>' . $warn_send . '</td><td>' . $v['warn_date'] . '</td><td>' . $v['warn_level'] . '</td><td>' . $v['warn_type'] . '</td><td>' . $v['warn_cont'] . '</td></tr>';
+			}
+		}
+		$strs_c = count($trs);
+		$pages = (intval(count($trs) / 13) + 1);
+		if ($_POST['page'] > 1) {
+			//当前分页大于总页数
+			if ($_POST['page'] >= $pages) {
+				$page = $pages;
+			} else {
+				$page = $_POST['page'];
+			}
+			$start = ($page - 1) * 13;
+			$stop = $page * 13 - 1;
+		} else {
+			$page = 1;
+			$start = 0;
+			$stop = 12;
+		}
+		$tbbody = '';
+		for ($i = 0; $i < $strs_c; $i++) {
+			//取出行号在此页中的
+			if ($start <= $i && $i <= $stop) {
+				$tbbody .= $trs[$i];
+			}
+		}
+		$select = '<div class="form-group"> <div class="input-group col-xs-12"><span class="input-group-btn"><select id="colname" class="form-control" style="width: auto;">' . $optstr . '</select></span><input type="text" name="keyword" id="keyword" class="form-control" placeholder="请输入关键词" value="' . $_POST['value'] . '"><span class="input-group-btn"><button class="btn btn-success" onclick=foritems2(all="key="+document.getElementById("colname").value+"&value="+document.getElementById("keyword").value,url="/monitor/index.php/warn/readhist",outid="result",warn="N",warnword="确定吗？",add="正在加载。。。")>搜索</button></span></div></div>';
+		echo $select;
+		if ($strs_c == 0) {
+			echo '<h2>没有相关内容</h2>';
+		} else {
+			$tbhead = '<div id="delmsg"><table  class="table table-bordered table-hover definewidth m10" style="font-size:12px;"><thead><tr><th>报警ID</th><th>是否报警</th><th>报警日期</th><th>报警级别</th><th>报警类型</th><th>报警内容</th></tr></thead>';
+			$tbfoot = '</table></div>';
+			//var_dump($_POST);
+			echo $tbhead . $tbbody . $tbfoot;
+			echo '<div style="float:right">共' . $pages . '页，共' . $strs_c . '条<button onclick=foritems2(all="key=' . $_POST['key'] . '&value=' . $_POST['value'] . '&page=' . ($page - 1) . '",url="/monitor/warn/readhist",outid="result",warn="N",warnword="确定吗？",add="正在加载。。。")>上一页</button><input id="page" onkeydown=if(event.keyCode==13){foritems2(all="key=' . $_POST['key'] . '&value=' . $_POST['value'] . '&page="+document.getElementById(\'page\').value,url="/monitor/warn/readhist",outid="result",warn="N",warnword="确定吗？",add="正在加载。。。")} type="text" style="width:40px;" value="' . $page . '" /><button onclick=foritems2(all="key=' . $_POST['key'] . '&value=' . $_POST['value'] . '&page=' . ($page + 1) . '",url="/monitor/warn/readhist",outid="result",warn="N",warnword="确定吗？",add="正在加载。。。")>下一页</button></div>';
+		}
+		exit();
+	}
+	//读取字段报警配置
+	public function readcols() {
+		//取出一级菜单的id及对应的title
+		$items1 = F('items1');
+		$items = null;
+		foreach ($items1 as $k => $v) {
+			$items[$v['id']] = $v['title'];
+		}
+		$items1 = $items;
+		//取出二级菜单的id及对应的title
+		$items2 = F('items2');
+		$items = null;
+		foreach ($items2 as $k => $v) {
+			$counts = count($v['id']);
+			for ($i = 0; $i < $counts; $i++) {
+				$items[$v['id'][$i]] = $v['title'][$i];
+			}
+		}
+		$items2 = $items;
+		//取出各字段id与对应的title
+		$cols = F('confs');
+		foreach ($cols as $k => $v) {
+			foreach ($v as $k1 => $v1) {
+				$cols2[$v1['id']]['title'] = $v1['cont_title'];
+				$cols2[$v1['id']]['itemid'] = $k;
+			}
+		}
+		$cols = $cols2;
+		//var_dump($cols);
+		F('cols_exist', $cols);
+		$warn_cols = F('warn_cols_conf'); //监控报警中的所有报警字段的配置
+		//var_dump($warn_cols);
+		$wcs = null;
+		$tbhead = '<div id="delmsg"><table  class="table table-bordered table-hover definewidth m10" style="font-size:12px;"><thead><tr><th>报警ID</th><th>报警字段ID</th><th>报警类型</th><th>报警阀值</th><th>关系逻辑</th><th>归属服务报警ID</th><th>管理/<button onclick=create_cols_warn()>新建</button></th></tr></thead>';
+		$trs = '';
+		foreach ($warn_cols as $k => $v) {
+			$trs .= '<tr><td>' . $v['id'] . '</td><td>' . $v['warn_colid'] . '</td><td>' . $v['warn_type'] . '</td><td>' . $v['warn_value'] . '</td><td>' . $v['warn_logic'] . '</td><td>' . $v['warn_center_id'] . '</td><td><button onclick=foritems2(all="act=edit&wk=' . $k . '",url="' . C('MOD_WARN') . '/edit_warn_cols",outid="create_warn",warn="N",warnword="确定提交吗？",add="数据库错误，请检查添加信息！")>修改</button><button onclick=foritems2(all="act=del&id=' . $v['id'] . '",url="' . C('MOD_WARN') . '/del_warn_cols",outid="create_warn",warn="Y",warnword="确定提交吗？",add="数据库错误，请检查添加信息！")>删除</button></td></tr>';
+		}
+		$tbfoot = '</table></div><div id="create_warn"></div>';
+		echo $tbhead . $trs . $tbfoot;
+		exit();
+	}
+	public function logic_text($logic, $area) {
+		if ($area == 'editwarn') {
+			//如果select标签在editwarn函数中
+			switch ($logic) {
+			case '1':
+				return '<select class="form-control" id="warn_logic"><option value=1 selected="selected">按大于匹配</option><option value=2>按小于匹配</option><option value=3>按包含匹配</option><option value=4>无条件报警</option></select>';
+				break;
+			case '2':
+				return '<select class="form-control" id="warn_logic"><option value=1>按大于匹配</option><option value=2 selected="selected">按小于匹配</option><option value=3>按包含匹配</option><option value=4>无条件报警</option></select>';
+				break;
+			case '3':
+				return '<select class="form-control" id="warn_logic"><option value=1>按大于匹配</option><option value=2>按小于匹配</option><option value=3 selected="selected">按包含匹配</option><option value=4>无条件报警</option></select>';
+				break;
+			case '4':
+				return '<select class="form-control" id="warn_logic"><option value=1>按大于匹配</option><option value=2>按小于匹配</option><option value=3>按包含匹配</option><option value=4 selected="selected">无条件报警</option></select>';
+				break;
+			default:
+				return '<select class="form-control" id="warn_logic"><option value=1>按大于匹配</option><option value=2>按小于匹配</option><option value=3>按包含匹配</option></select>';
+				break;
+			}
+		} else {
+			switch ($logic) {
+			case '1':
+				return '<select class="form-control" id="warn_logic"><option value=1 selected="selected">按大于匹配</option><option value=2>按小于匹配</option><option value=3>按包含匹配</option></select>';
+				break;
+			case '2':
+				return '<select class="form-control" id="warn_logic"><option value=1>按大于匹配</option><option value=2 selected="selected">按小于匹配</option><option value=3>按包含匹配</option></select>';
+				break;
+			case '3':
+				return '<select class="form-control" id="warn_logic"><option value=1>按大于匹配</option><option value=2>按小于匹配</option><option value=3 selected="selected">按包含匹配</option></select>';
+				break;
+			default:
+				return '<select class="form-control" id="warn_logic"><option value=1>按大于匹配</option><option value=2>按小于匹配</option><option value=3>按包含匹配</option></select>';
+				break;
+			}
+		}
+	}
+	public function edit_warn_cols() {
+		$warn_conf = F('warn_cols_conf');
+		$form = '<form class="form-horizontal" role="form" style="padding-left:10%;padding-top:3%;width:80%;"><div class="form-group"><label for="firstname" class="col-sm-2 control-label">报警ID</label><div class="col-sm-10"><input id="id" type="text" class="form-control" readonly="true" value="' . $warn_conf[$_POST['wk']]['id'] . '"></div></div><div class="form-group"><label for="firstname" class="col-sm-2 control-label">字段ID</label><div class="col-sm-10"><input id="colid" type="text" class="form-control" value="' . $warn_conf[$_POST['wk']]['warn_colid'] . '"></div></div><div class="form-group"><label for="firstname" class="col-sm-2 control-label">报警类型</label><div class="col-sm-10"><input id="warn_type" type="text" class="form-control" value="' . $warn_conf[$_POST['wk']]['warn_type'] . '"></div></div><div class="form-group"><label for="lastname" class="col-sm-2 control-label">报警阀值</label><div class="col-sm-10"><input id="warn_value" type="text" class="form-control" value=' . $warn_conf[$_POST['wk']]['warn_value'] . '></div></div><div class="form-group"><label for="lastname" class="col-sm-2 control-label">关系逻辑</label><div class="col-sm-10">' . $this->logic_text($warn_conf[$_POST['wk']]['warn_logic']) . '</div></div><div class="form-group"><label for="lastname" class="col-sm-2 control-label">归属服务报警ID</label><div class="col-sm-10"><input id="warn_center_id" type="text" class="form-control" value=' . $warn_conf[$_POST['wk']]['warn_center_id'] . '></div></div><div class="form-group"><div class="col-sm-offset-2 col-sm-10"><button onclick=foritems2(all="id="+document.getElementById("id").value+"&colid="+document.getElementById("colid").value+"&warn_type="+document.getElementById("warn_type").value+"&warn_value="+document.getElementById("warn_value").value+"&warn_logic="+document.getElementById("warn_logic").value+"&warn_center_id="+document.getElementById("warn_center_id").value,url="' . C('MOD_WARN') . '/savecreatecols",outid="edit_warn_info",warn="Y",warnword="确定提交吗？",add="数据库错误，请检查添加信息！") type="button" class="btn btn-default">提交</button><button type="button" class="btn btn-default" onclick=document.getElementById("create_warn").innerHTML="" >返回</button></div></div></form><div id="edit_warn_info" style="padding-left:15%;padding-top:3%;width:70%;color:#ff0000;"></div>';
+		echo $form;
+		exit();
+	}
+	public function del_warn_cols() {
+>>>>>>> 31762b4b0f4e2243d44e68858875bb7bfc983fca
 
         } catch (\Error $e) {
             echo '新增监控报警失败:' . $e->getMessage();
@@ -311,6 +457,7 @@ class WarnController extends Controller
         exit();
     }
 
+<<<<<<< HEAD
     public function report()
     {
         try {
@@ -320,3 +467,18 @@ class WarnController extends Controller
         }
     }
 }
+=======
+		} catch (\Error $e) {
+			echo '新增监控报警失败:' . $e->getMessage();
+		}
+		exit();
+	}
+	public function report() {
+		try {
+			$obj = new myclass();
+		} catch (\Error $e) {
+			echo '捕获异常后的错误信息显示在这里';
+		}
+	}
+}
+>>>>>>> 31762b4b0f4e2243d44e68858875bb7bfc983fca
